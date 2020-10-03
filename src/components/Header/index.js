@@ -29,9 +29,12 @@ const Header = () => {
 
   return (
     <Box
-      style={{
-        position: 'fixed',
-        zIndex: 2
+      // style={{
+      //   position: 'fixed',
+      //   zIndex: 2
+      // }}
+      pad={{
+        horizontal: 'large'
       }}
       fill='horizontal'
       height='xsmall'
@@ -44,7 +47,7 @@ const Header = () => {
         size !== 'small' ? (
           <DesktopHeader links={links} />
         ) : (
-          <MobileHeader />
+          <MobileHeader links={links} />
         )
       }
     </Box>

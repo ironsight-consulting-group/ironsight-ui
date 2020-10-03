@@ -27,8 +27,10 @@ export const getMobileLinks = links => {
     label: (
       <Anchor
         item={item}
-        horizontal='medium'
-        vertical='small'
+        pad={{
+          horizontal: 'medium',
+          vertical: 'small',
+        }}
       />
     ),
   }))

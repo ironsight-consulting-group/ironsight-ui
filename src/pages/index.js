@@ -1,6 +1,6 @@
 import React from "react"
 import Home from "./home"
-import withApp from "../HOCs/withApp"
+import { withApp } from "../HOCs"
 
 const IndexPage = () => <Home />
 

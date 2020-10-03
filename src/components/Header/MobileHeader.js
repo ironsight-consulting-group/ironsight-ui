@@ -9,18 +9,16 @@ const MobileHeader = ({ links }) => {
 
   return (
     <Fragment>
-      <Box margin={{ left: 'large' }}>
-        <Menu
-          size='large'
-          icon={
-            <MenuIcon
-              size='medium'
-              color='black'
-            />
-          }
-          items={getMobileLinks(links)}
-        />
-      </Box>
+      <Menu
+        size='large'
+        icon={
+          <MenuIcon
+            size='medium'
+            color='black'
+          />
+        }
+        items={getMobileLinks(links)}
+      />
       <Box onClick={() => navigate('/')}>
         /* TODO: add mobile logo here */
         <div/>
