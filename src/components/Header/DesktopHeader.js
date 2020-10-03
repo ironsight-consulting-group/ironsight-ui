@@ -1,33 +1,21 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Box } from "grommet";
 
 import { getDesktopLinks } from "./utils"
 
-const DesktopHeader = ({ links }) => {
-
-  const data = useStaticQuery(
-    graphql`
-      query DesktopHeaderQuery {
-        file(relativePath: { eq: "ironsight_logo.png" }) {
-          childImageSharp {
-            fluid(maxHeight: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-  )
+const DesktopHeader = ({ links, logo }) => {
 
   return (
     <Fragment>
       <a href="/">
-        <Box width='200px'>
+        <Box
+          width='200px'
+          margin={{ left: 'medium' }}
+        >
           <Img
-            fluid={data.file.childImageSharp.fluid}
+            fluid={logo}
             alt="Ironsight Logo"
           />
         </Box>
@@ -35,6 +23,7 @@ const DesktopHeader = ({ links }) => {
       <Box
         direction='row'
         gap='medium'
+        margin={{ right: 'large' }}
       >
         {getDesktopLinks(links)}
       </Box>

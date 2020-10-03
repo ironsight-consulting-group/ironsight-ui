@@ -14,9 +14,9 @@ export const isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
 };
 
 export const getLinksFromData = get('site.siteMetadata.links');
+export const getImageFromData = get('file.childImageSharp.fluid');
 
 export const getDesktopLinks = links => {
-  console.log(links);
   const linkComponents = links.map(item => (
     <Anchor key={item.path} item={item}/>
   ));

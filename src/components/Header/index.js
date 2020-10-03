@@ -4,7 +4,7 @@ import { Box, ResponsiveContext } from "grommet";
 
 import DesktopHeader from "./DesktopHeader"
 import MobileHeader from "./MobileHeader"
-import { getLinksFromData } from "./utils"
+import { getImageFromData, getLinksFromData } from "./utils"
 
 const Header = () => {
 
@@ -20,11 +20,19 @@ const Header = () => {
             }
           }
         }
+        file(relativePath: { eq: "ironsight_logo.png" }) {
+            childImageSharp {
+                fluid(maxHeight: 100) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
       }
     `
   );
 
-  const getLinks = useCallback(() => getLinksFromData(data), [data]);
+  const getLinks = useCallback(() => getLinksFromData(data), [data, getLinksFromData]);
+  const getImage = useCallback(() => getImageFromData(data), [data, getImageFromData]);
 
   return (
     <Box
@@ -32,10 +40,6 @@ const Header = () => {
       //   position: 'fixed',
       //   zIndex: 2
       // }}
-      pad={{
-        left: 'medium',
-        right: 'large'
-      }}
       fill='horizontal'
       height='xsmall'
       justify='between'
@@ -45,9 +49,9 @@ const Header = () => {
     >
       {
         size !== 'small' ? (
-          <DesktopHeader links={getLinks()} />
+          <DesktopHeader logo={getImage()} links={getLinks()} />
         ) : (
-          <MobileHeader links={getLinks()} />
+          <MobileHeader logo={getImage()} links={getLinks()} />
         )
       }
     </Box>

@@ -1,30 +1,18 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
-import { graphql, useStaticQuery } from "gatsby"
 import { Box, Menu } from "grommet";
 import { Menu as MenuIcon } from "grommet-icons";
 
 import { getMobileLinks } from "./utils"
-import Img from "./MobileHeader"
+import Img from "gatsby-image"
 
-const MobileHeader = ({ links }) => {
-
-  const data = useStaticQuery(
-    graphql`
-        query MobileHeaderQuery {
-            file(relativePath: { eq: "ironsight_logo.png" }) {
-                childImageSharp {
-                    fluid(maxHeight: 100) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `
-  )
+const MobileHeader = ({ links, logo }) => {
 
   return (
     <Fragment>
+      <Box
+        margin={{ left: 'large' }}
+      >
       <Menu
         size='large'
         icon={
@@ -35,10 +23,14 @@ const MobileHeader = ({ links }) => {
         }
         items={getMobileLinks(links)}
       />
+      </Box>
       <a href="/">
-        <Box width='200px'>
+        <Box
+          width='200px'
+          margin={{ right: 'large' }}
+        >
           <Img
-            fluid={data.file.childImageSharp.fluid}
+            fluid={logo}
             alt="Ironsight Logo"
           />
         </Box>
