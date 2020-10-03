@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
 import { useStaticQuery, graphql } from "gatsby"
 import { Box, ResponsiveContext } from "grommet";
 
-import get from 'lodash/get';
-
 import DesktopHeader from "./DesktopHeader"
 import MobileHeader from "./MobileHeader"
+import { getLinksFromData } from "./utils"
 
 const Header = () => {
 
@@ -25,7 +24,7 @@ const Header = () => {
     `
   );
 
-  const links = get(data, 'site.siteMetadata.links');
+  const getLinks = useCallback(() => getLinksFromData(data), [data]);
 
   return (
     <Box
@@ -34,7 +33,8 @@ const Header = () => {
       //   zIndex: 2
       // }}
       pad={{
-        horizontal: 'large'
+        left: 'medium',
+        right: 'large'
       }}
       fill='horizontal'
       height='xsmall'
@@ -45,9 +45,9 @@ const Header = () => {
     >
       {
         size !== 'small' ? (
-          <DesktopHeader links={links} />
+          <DesktopHeader links={getLinks()} />
         ) : (
-          <MobileHeader links={links} />
+          <MobileHeader links={getLinks()} />
         )
       }
     </Box>

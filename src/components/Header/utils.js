@@ -1,5 +1,6 @@
 import React from "react"
 import Anchor from "./Anchor"
+import get from "lodash/fp/get";
 
 export const isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
   const show = (isPartiallyCurrent && href !== '/') || (isCurrent && href === '/');
@@ -12,13 +13,17 @@ export const isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
   } : {};
 };
 
+export const getLinksFromData = get('site.siteMetadata.links');
+
 export const getDesktopLinks = links => {
+  console.log(links);
   const linkComponents = links.map(item => (
-    <Anchor item={item}/>
+    <Anchor key={item.path} item={item}/>
   ));
   // TODO: add Services dropdown into index 1 of this array
   // arr.splice(index, 0, item);
   return linkComponents;
+  // return [];
 }
 
 export const getMobileLinks = links => {

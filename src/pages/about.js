@@ -1,5 +1,4 @@
 import React from "react"
-import { withApp } from "../HOCs"
 
 const About = () => {
   return (
@@ -9,4 +8,4 @@ const About = () => {
   )
 }
 
-export default withApp(About);
+export default About;

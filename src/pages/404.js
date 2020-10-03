@@ -1,7 +1,5 @@
 import React, { Fragment } from "react"
-
-import Seo from "../components/seo"
-import { withApp } from "../HOCs"
+import Seo from "../components/Seo"
 
 const NotFoundPage = () => (
   <Fragment>
@@ -11,4 +9,4 @@ const NotFoundPage = () => (
   </Fragment>
 )
 
-export default withApp(NotFoundPage);
+export default NotFoundPage;
