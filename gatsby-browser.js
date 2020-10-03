@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/browser-apis/
- */
+import "./src/app/global.css"
 
-// You can delete this file if you're not using it
+/**
+ * Since HTML is prerendered, need to wait until the JS
+ * has loaded to show the screen. This hack fixes the flashing
+ * on refresh.
+ */
+export const onInitialClientRender = () => {
+  const item = document.getElementById("hide-content");
+  item.removeAttribute("id");
+};
