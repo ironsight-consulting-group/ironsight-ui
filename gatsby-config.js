@@ -17,6 +17,20 @@ module.exports = {
         path: '/about',
         label: 'About',
       },
+      {
+        path: '/services',
+        label: 'Services',
+        subPaths: [
+          {
+            path: '/services/commercialization-consulting',
+            label: 'Commercialization Consulting',
+          },
+          {
+            path: '/services/competitive-insights',
+            label: 'Competitive Insights',
+          },
+        ]
+      }
     ],
   },
   plugins: [

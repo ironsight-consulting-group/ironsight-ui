@@ -4,7 +4,7 @@ import { Box, ResponsiveContext } from "grommet";
 
 import DesktopHeader from "./DesktopHeader"
 import MobileHeader from "./MobileHeader"
-import { getImageFromData, getLinksFromData } from "./utils"
+import { getImageFromData, getLinksFromData, getMenusFromData } from "./utils"
 
 const Header = () => {
 
@@ -17,6 +17,10 @@ const Header = () => {
             links {
               label
               path
+              subPaths {
+                label
+                path
+              }
             }
           }
         }
@@ -31,8 +35,9 @@ const Header = () => {
     `
   );
 
-  const getLinks = useCallback(() => getLinksFromData(data), [data, getLinksFromData]);
-  const getImage = useCallback(() => getImageFromData(data), [data, getImageFromData]);
+  const getLinks = useCallback(() => getLinksFromData(data), [data]);
+  const getImage = useCallback(() => getImageFromData(data), [data]);
+  const getMenus = useCallback(() => getMenusFromData(data), [data]);
 
   return (
     <Box
@@ -49,9 +54,9 @@ const Header = () => {
     >
       {
         size !== 'small' ? (
-          <DesktopHeader logo={getImage()} links={getLinks()} />
+          <DesktopHeader logo={getImage()} menus={getMenus()} links={getLinks()} />
         ) : (
-          <MobileHeader logo={getImage()} links={getLinks()} />
+          <MobileHeader logo={getImage()} menus={getMenus()} links={getLinks()} />
         )
       }
     </Box>

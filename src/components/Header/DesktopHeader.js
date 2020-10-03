@@ -5,7 +5,7 @@ import { Box } from "grommet";
 
 import { getDesktopLinks } from "./utils"
 
-const DesktopHeader = ({ links, logo }) => {
+const DesktopHeader = ({ links, logo, menus }) => {
 
   return (
     <Fragment>
@@ -25,7 +25,7 @@ const DesktopHeader = ({ links, logo }) => {
         gap='medium'
         margin={{ right: 'large' }}
       >
-        {getDesktopLinks(links)}
+        {getDesktopLinks(links, menus)}
       </Box>
     </Fragment>
   )
