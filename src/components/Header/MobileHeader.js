@@ -11,7 +11,7 @@ const MobileHeader = ({ links }) => {
 
   const data = useStaticQuery(
     graphql`
-        query {
+        query MobileHeaderQuery {
             file(relativePath: { eq: "ironsight_logo.png" }) {
                 childImageSharp {
                     fluid(maxHeight: 100) {

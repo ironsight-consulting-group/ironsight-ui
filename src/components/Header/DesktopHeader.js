@@ -10,7 +10,7 @@ const DesktopHeader = ({ links }) => {
 
   const data = useStaticQuery(
     graphql`
-      query {
+      query DesktopHeaderQuery {
         file(relativePath: { eq: "ironsight_logo.png" }) {
           childImageSharp {
             fluid(maxHeight: 100) {
