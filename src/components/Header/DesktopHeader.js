@@ -9,7 +9,7 @@ import { getDesktopLinks } from "./utils"
 const DesktopHeader = ({ links, logo, menus }) => (
   <Fragment>
     <Button plain onClick={() => navigate("/")}>
-      <Box width="200px" margin={{ left: "medium" }}>
+      <Box width="200px" margin={{ right: "medium" }}>
         <Img fluid={logo} alt="Ironsight Logo" />
       </Box>
     </Button>
