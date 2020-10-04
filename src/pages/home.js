@@ -2,8 +2,9 @@ import React, { useContext } from "react"
 import { Heading, Box, Text, ResponsiveContext } from "grommet"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from 'gatsby-image';
-import { BasicLink, MobileBasicLink } from "../components"
 import { Analytics, Article, Calendar } from "grommet-icons"
+
+import { BasicLink, MobileBasicLink } from "../components"
 
 const EXPLORE_LINKS = [
   {
