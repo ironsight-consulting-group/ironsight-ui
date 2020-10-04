@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from 'prop-types';
 import { Box } from "grommet"
 
 const Page = ({
@@ -23,5 +24,14 @@ const Page = ({
     </Box>
   </Box>
 )
+
+Page.propTypes = {
+  children: PropTypes.object.isRequired,
+  background: PropTypes.string,
+};
+
+Page.defaultProps = {
+  background: 'white'
+}
 
 export default Page

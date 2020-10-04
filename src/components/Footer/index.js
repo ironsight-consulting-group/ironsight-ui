@@ -42,7 +42,11 @@ const Footer = () => {
       >
         {
           links.map(item => (
-            <BasicLink size='10px' item={item} />
+            <BasicLink
+              key={item.label}
+              item={item}
+              size='10px'
+            />
           ))
         }
       </Box>

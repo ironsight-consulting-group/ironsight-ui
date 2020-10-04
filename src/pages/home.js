@@ -78,7 +78,7 @@ const Home = () => {
       >
         {
           EXPLORE_LINKS.map(item => (
-            <BasicLink item={item}/>
+            <BasicLink key={item.label} item={item}/>
           ))
         }
       </Box>

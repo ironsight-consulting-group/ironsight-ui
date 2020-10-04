@@ -6,20 +6,18 @@ import { Box, Button } from "grommet"
 
 import { getDesktopLinks } from "./utils"
 
-const DesktopHeader = ({ links, logo, menus }) => {
-  return (
-    <Fragment>
-      <Button plain onClick={() => navigate("/")}>
-        <Box width="200px" margin={{ left: "medium" }}>
-          <Img fluid={logo} alt="Ironsight Logo" />
-        </Box>
-      </Button>
-      <Box direction="row" gap="medium" margin={{ right: "large" }}>
-        {getDesktopLinks(links, menus)}
+const DesktopHeader = ({ links, logo, menus }) => (
+  <Fragment>
+    <Button plain onClick={() => navigate("/")}>
+      <Box width="200px" margin={{ left: "medium" }}>
+        <Img fluid={logo} alt="Ironsight Logo" />
       </Box>
-    </Fragment>
-  )
-}
+    </Button>
+    <Box direction="row" gap="medium" margin={{ right: "large" }}>
+      {getDesktopLinks(links, menus)}
+    </Box>
+  </Fragment>
+)
 
 DesktopHeader.propTypes = {
   links: PropTypes.array,

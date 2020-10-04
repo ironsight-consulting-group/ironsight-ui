@@ -3,12 +3,12 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Box, Text } from "grommet"
 
-const BasicLink = ({ item, icon, ...rest }) => (
+const BasicLink = ({ item, ...rest }) => (
 	<Box
 		direction='row'
 		gap='small'
 	>
-		{item.icon && item.icon}
+		{item.icon}
 		<Text
 			key={item.path}
 			{...rest}
@@ -31,6 +31,7 @@ BasicLink.propTypes = {
 	item: PropTypes.shape({
 		path: PropTypes.string.isRequired,
 		label: PropTypes.string.isRequired,
+		icon: PropTypes.node,
 	}).isRequired,
 }
 

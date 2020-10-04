@@ -1,4 +1,5 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Box, Text } from "grommet"
 import { Link } from "gatsby"
 
@@ -22,5 +23,12 @@ const Anchor = ({ item, ...rest }) => (
     </Text>
   </Box>
 )
+
+Anchor.propTypes = {
+  item: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+  }).isRequired,
+}
 
 export default Anchor
