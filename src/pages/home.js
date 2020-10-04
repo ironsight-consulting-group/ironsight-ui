@@ -1,8 +1,8 @@
-import React from "react"
-import { Heading, Box, Text } from "grommet"
+import React, { useContext } from "react"
+import { Heading, Box, Text, ResponsiveContext } from "grommet"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from 'gatsby-image';
-import BasicLink from "../components/BasicLink"
+import { BasicLink, MobileBasicLink } from "../components"
 import { Analytics, Article, Calendar } from "grommet-icons"
 
 const EXPLORE_LINKS = [
@@ -25,6 +25,7 @@ const EXPLORE_LINKS = [
 
 const Home = () => {
 
+  const size = useContext(ResponsiveContext)
   const data = useStaticQuery(
     graphql`
       query HomeQuery {
@@ -47,12 +48,15 @@ const Home = () => {
       gap='xlarge'
     >
       <Box
-        direction='row'
+        direction={size === 'small' ? 'column' : 'row'}
         gap='large'
         justify='center'
         align='center'
       >
-        <Box margin={{ bottom: 'large' }}>
+        <Box
+          margin={{ bottom: 'large' }}
+          align={size === 'small' ? 'center' : 'start'}
+        >
           <Heading margin={{ top: 'none', bottom: 'small' }}>
             Automate your CI
           </Heading>
@@ -66,19 +70,25 @@ const Home = () => {
           </Box>
         </Box>
         <Box
-          width='600px'
+          width={size === 'small' ? '450px' : '600px'}
           margin={{ left: 'medium' }}
         >
           <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
         </Box>
       </Box>
       <Box
-        direction='row'
-        gap='xlarge'
+        direction={size === 'small' ? 'column' : 'row'}
+        gap={size === 'small' ? 'large' : 'xlarge'}
+        align={size === 'small' ? 'center' : 'start'}
+        margin={size === 'small' ? 'medium' : 'none'}
       >
         {
           EXPLORE_LINKS.map(item => (
-            <BasicLink key={item.label} item={item}/>
+            size === 'small' ? (
+              <MobileBasicLink key={item.label} item={item} />
+            ) : (
+              <BasicLink key={item.label} item={item}/>
+            )
           ))
         }
       </Box>

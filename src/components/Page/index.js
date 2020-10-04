@@ -18,7 +18,6 @@ const Page = ({
       fill='horizontal'
       align='start'
       overflow='auto'
-
     >
       {children}
     </Box>
