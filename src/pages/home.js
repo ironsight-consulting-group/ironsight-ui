@@ -9,17 +9,17 @@ const EXPLORE_LINKS = [
   {
     path: '/',
     label: 'Learn about our services',
-    icon: <Article />
+    icon: <Article color='bronze' />
   },
   {
     path: '/',
     label: 'Schedule a meeting',
-    icon: <Calendar />
+    icon: <Calendar color='bronze' />
   },
   {
     path: '/',
     label: 'Explore our research',
-    icon: <Analytics />
+    icon: <Analytics color='bronze' />
   },
 ]
 
