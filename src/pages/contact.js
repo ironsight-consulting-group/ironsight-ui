@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import { Box, Heading, ResponsiveContext, Text } from "grommet"
+import { Anchor, Box, Heading, ResponsiveContext, Text } from "grommet"
 import { MailOption, PhoneVertical, Map } from 'grommet-icons';
 
 import { QuestionForm } from "../forms"
@@ -7,14 +7,17 @@ import { QuestionForm } from "../forms"
 const CONTACT_INFO = [
   {
     label: 'info@ironsightcg.com',
+    href: 'mailto:info@ironsightcg.com',
     icon: <MailOption color='blue-3' />,
   },
   {
     label: '412-305-3872',
+    href: 'tel:4123053872',
     icon: <PhoneVertical color='blue-3' />,
   },
   {
-    label: '1208 Laplace St, New Fort Collins, CY 80543',
+    label: '1206 Pomona St, Fort Collins, CO 80521',
+    href: 'https://www.google.com/maps/place/1206+Pomona+St,+Fort+Collins,+CO+80521/@40.5972173,-105.1008937,17z/data=!3m1!4b1!4m5!3m4!1s0x87694a73b065dad3:0x6998078ca9fff80d!8m2!3d40.5972132!4d-105.098705',
     icon: <Map color='blue-3' />,
   },
 ];
@@ -46,8 +49,11 @@ const Contact = () => {
           {
             CONTACT_INFO.map(item => (
               <Box direction='row' gap='small'>
-                {item.icon}
-                <Text weight='bold'>{item.label}</Text>
+                <Anchor
+                  color='black'
+                  target='_blank'
+                  {...item}
+                />
               </Box>
             ))
           }
