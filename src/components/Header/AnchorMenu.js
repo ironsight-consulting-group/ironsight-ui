@@ -67,11 +67,11 @@ AnchorMenu.propTypes = {
     label: PropTypes.string.isRequired,
   })).isRequired,
   label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onMenuItemClick: PropTypes.func,
 };
 
 AnchorMenu.defaultProps = {
-  onClick: noop
+  onMenuItemClick: noop
 }
 
 export default AnchorMenu
