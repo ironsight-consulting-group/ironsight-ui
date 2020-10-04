@@ -3,4 +3,4 @@ import Home from "./home"
 
 const IndexPage = () => <Home />
 
-export default IndexPage;
+export default IndexPage

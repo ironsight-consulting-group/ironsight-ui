@@ -1,12 +1,12 @@
-import { grommet } from 'grommet';
-import merge from 'lodash/merge'
+import { grommet } from "grommet"
+import merge from "lodash/merge"
 
 const theme = {
   global: {
     font: {
-      family: 'Roboto',
+      family: "Roboto",
     },
-  }
-};
+  },
+}
 
 export default merge(theme, grommet)

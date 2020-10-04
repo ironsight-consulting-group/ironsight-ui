@@ -7,12 +7,10 @@ const Anchor = ({ item, ...rest }) => (
   <Box {...rest}>
     <Text key={item.path}>
       <Link
-        style={
-          {
-            textDecoration: 'none',
-            color: 'black',
-          }
-        }
+        style={{
+          textDecoration: "none",
+          color: "black",
+        }}
         to={item.path}
         getProps={isActive}
         partiallyActive
@@ -24,4 +22,4 @@ const Anchor = ({ item, ...rest }) => (
   </Box>
 )
 
-export default Anchor;
+export default Anchor

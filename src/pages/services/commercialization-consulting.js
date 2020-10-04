@@ -1,11 +1,7 @@
 import React from "react"
 
 const CommercializationConsulting = () => {
-  return (
-    <div>
-      Commercialization Consulting
-    </div>
-  )
+  return <div>Commercialization Consulting</div>
 }
 
-export default CommercializationConsulting;
+export default CommercializationConsulting

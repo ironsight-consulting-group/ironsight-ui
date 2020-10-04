@@ -1,4 +1,4 @@
-export const state = {};
+export const state = {}
 
 export const reducer = (state, action) => {
   switch (action.type) {
@@ -9,6 +9,6 @@ export const reducer = (state, action) => {
     //   };
 
     default:
-      return state;
+      return state
   }
-};
+}

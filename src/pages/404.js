@@ -9,4 +9,4 @@ const NotFoundPage = () => (
   </Fragment>
 )
 
-export default NotFoundPage;
+export default NotFoundPage

@@ -6,6 +6,6 @@ import "./src/app/global.css"
  * on refresh.
  */
 export const onInitialClientRender = () => {
-  const item = document.getElementById("hide-content");
-  item.removeAttribute("id");
-};
+  const item = document.getElementById("hide-content")
+  item.removeAttribute("id")
+}

@@ -4,33 +4,32 @@ module.exports = {
     description: `Automate your pharmaceutical consulting needs.`,
     author: `michaelplazek`,
     links: [
-
       {
-        path: '/',
-        label: 'Home',
+        path: "/",
+        label: "Home",
       },
       {
-        path: '/contact',
-        label: 'Contact Us',
+        path: "/contact",
+        label: "Contact Us",
       },
       {
-        path: '/about',
-        label: 'About',
+        path: "/about",
+        label: "About",
       },
       {
-        path: '/services',
-        label: 'Services',
+        path: "/services",
+        label: "Services",
         subPaths: [
           {
-            path: '/services/commercialization-consulting',
-            label: 'Commercialization Consulting',
+            path: "/services/commercialization-consulting",
+            label: "Commercialization Consulting",
           },
           {
-            path: '/services/competitive-insights',
-            label: 'Competitive Insights',
+            path: "/services/competitive-insights",
+            label: "Competitive Insights",
           },
-        ]
-      }
+        ],
+      },
     ],
   },
   plugins: [

@@ -10,7 +10,7 @@ export default function HTML(props) {
         {/*<meta name="google-site-verification" content="_BWE_k0AjSUH1fansc1lnn-EJ_wPA0KNrkCPQYipW1k" />*/}
         {props.headComponents}
       </head>
-      <body id='hide-content' {...props.bodyAttributes}>
+      <body id="hide-content" {...props.bodyAttributes}>
         {props.preBodyComponents}
         <div
           key={`body`}
@@ -30,4 +30,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-};
+}
