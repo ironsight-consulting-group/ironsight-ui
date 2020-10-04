@@ -52,20 +52,24 @@ export const getDesktopLinks = (links, menus) => {
   }, linkComponents);
 }
 
-export const getMobileLinks = links => {
-  const linkComponents = links.map(item => ({
-    key: item.path,
-    label: (
-      <Anchor
-        item={item}
-        pad={{
-          horizontal: 'medium',
-          vertical: 'small',
-        }}
-      />
-    ),
-  }))
-  // TODO: add Services dropdown into index 1 of this array
-  // arr.splice(index, 0, item);
-  return linkComponents;
+export const getMobileLinks = (links, menus) => {
+  const linkComponents = links.map(item => (
+    <Anchor
+      key={item.label}
+      item={item}
+      pad='medium'
+    />
+  ))
+  const menuComponents = menus.map(item => (
+    <AnchorMenu
+      key={item.label}
+      items={item.subPaths}
+      label={item.label}
+      pad='medium'
+    />
+  ))
+  return menuComponents.reduce((acc, curr) => {
+    acc.splice(1, 0, curr);
+    return acc;
+  }, linkComponents);
 };

@@ -39,6 +39,8 @@ const Header = () => {
   const getImage = useCallback(() => getImageFromData(data), [data]);
   const getMenus = useCallback(() => getMenusFromData(data), [data]);
 
+  console.log(size);
+
   return (
     <Box
       // style={{
@@ -54,9 +56,17 @@ const Header = () => {
     >
       {
         size !== 'small' ? (
-          <DesktopHeader logo={getImage()} menus={getMenus()} links={getLinks()} />
+          <DesktopHeader
+            logo={getImage()}
+            menus={getMenus()}
+            links={getLinks()}
+          />
         ) : (
-          <MobileHeader logo={getImage()} menus={getMenus()} links={getLinks()} />
+          <MobileHeader
+            logo={getImage()}
+            menus={getMenus()}
+            links={getLinks()}
+          />
         )
       }
     </Box>

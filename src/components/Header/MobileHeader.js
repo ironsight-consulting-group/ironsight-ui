@@ -1,50 +1,48 @@
 import React, { Fragment } from "react";
 import PropTypes from 'prop-types';
-import { Box, Menu } from "grommet";
-import { Menu as MenuIcon } from "grommet-icons";
-
-import { getMobileLinks } from "./utils"
+import { Box, Button, } from "grommet"
 import Img from "gatsby-image"
+import { navigate } from 'gatsby';
 
-const MobileHeader = ({ links, logo }) => {
+import MobileMenu from "./MobileMenu"
 
-  return (
-    <Fragment>
-      <Box
-        margin={{ left: 'large' }}
-      >
-      <Menu
-        size='large'
-        icon={
-          <MenuIcon
-            size='medium'
-            color='black'
-          />
-        }
-        items={getMobileLinks(links)}
+const MobileHeader = ({ links, logo, menus }) => (
+  <Fragment>
+    <Box
+      margin={{ left: 'large' }}
+    >
+      <MobileMenu
+        links={links}
+        menus={menus}
       />
+    </Box>
+    <Button
+      plain
+      onClick={() => navigate('/')}
+    >
+      <Box
+        width='200px'
+        margin={{ right: 'large' }}
+      >
+        <Img
+          fluid={logo}
+          alt="Ironsight Logo"
+        />
       </Box>
-      <a href="/">
-        <Box
-          width='200px'
-          margin={{ right: 'large' }}
-        >
-          <Img
-            fluid={logo}
-            alt="Ironsight Logo"
-          />
-        </Box>
-      </a>
-    </Fragment>
-  )
-};
+    </Button>
+  </Fragment>
+)
 
 MobileHeader.propTypes = {
   links: PropTypes.array,
+  logo: PropTypes.object,
+  menus: PropTypes.array,
 };
 
 MobileHeader.defaultProps = {
   links: [],
+  logo: {},
+  menus: [],
 };
 
 export default MobileHeader;

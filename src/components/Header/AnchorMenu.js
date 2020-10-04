@@ -5,47 +5,50 @@ import { Box, DropButton, ResponsiveContext } from "grommet"
 import Anchor from "./Anchor"
 import { menuIsActive } from "./utils"
 
-const AnchorMenu = ({ items, label }) => {
+const AnchorMenu = ({ items, label, ...rest }) => {
   const size = useContext(ResponsiveContext);
   const [open, setOpen] = useState(false);
   return (
-    <DropButton
-      plain
-      color='black'
-      label={label}
-      open={open}
-      style={menuIsActive(label)}
-      onClick={() => setOpen(!open)}
-      dropAlign={(() => (
-        size === 'small' ? {
-          left: 'right'
-        } : {
-          top: 'bottom',
-          left: "left"
-        }
-      ))()}
-      dropContent={
-        <Box>
-          {
-            items.map(item => (
-              <Anchor
-                key={item.label}
-                item={item}
-                onClick={() => setOpen(false)}
-                pad={{
-                  horizontal: 'medium',
-                  vertical: 'small',
-                }}
-              />
-            ))
+    <Box {...rest}>
+      <DropButton
+        pad='large'
+        plain
+        color='black'
+        label={label}
+        open={open}
+        style={menuIsActive(label)}
+        onClick={() => setOpen(!open)}
+        dropAlign={(() => (
+          size === 'small' ? {
+            left: 'right'
+          } : {
+            top: 'bottom',
+            left: "left"
           }
-        </Box>
-      }
-      dropProps={{
-        responsive: true,
-        onClickOutside: () => setOpen(false),
-      }}
-    />
+        ))()}
+        dropContent={
+          <Box>
+            {
+              items.map(item => (
+                <Anchor
+                  key={item.label}
+                  item={item}
+                  onClick={() => setOpen(false)}
+                  pad={{
+                    horizontal: 'medium',
+                    vertical: 'small',
+                  }}
+                />
+              ))
+            }
+          </Box>
+        }
+        dropProps={{
+          responsive: true,
+          onClickOutside: () => setOpen(false),
+        }}
+      />
+    </Box>
   )
 };
 
@@ -55,6 +58,6 @@ AnchorMenu.propTypes = {
     label: PropTypes.string.isRequired,
   })).isRequired,
   label: PropTypes.string.isRequired,
-}
+};
 
 export default AnchorMenu
