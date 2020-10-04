@@ -35,8 +35,8 @@ const Contact = () => {
   };
 
   return (
-    <Box fill={true}>
-      <Box margin={{ horizontal: 'large' }}>
+    <Box flex={false} fill={true}>
+      <Box flex={false} margin={{ horizontal: 'large' }}>
         <Box>
           <Heading level={2} margin={{ bottom: 'xsmall', top: 'none' }}>
             Contact us anytime, day or night.
@@ -48,7 +48,13 @@ const Contact = () => {
         <Box margin={{ top: 'large' }} gap='medium'>
           {
             CONTACT_INFO.map(item => (
-              <Box direction='row' gap='small'>
+              <Box
+                key={item.label}
+                style={{
+                  display: 'inline-block',
+                  width: '100%'
+                }}
+              >
                 <Anchor
                   color='black'
                   target='_blank'

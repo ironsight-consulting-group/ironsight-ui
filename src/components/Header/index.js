@@ -23,7 +23,7 @@ const Header = () => {
             }
           }
         }
-        file(relativePath: { eq: "ironsight_logo.png" }) {
+        file(relativePath: { eq: "ironsight_logo_blue.png" }) {
           childImageSharp {
             fluid(maxHeight: 100) {
               ...GatsbyImageSharpFluid
