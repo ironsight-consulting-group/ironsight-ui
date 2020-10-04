@@ -7,10 +7,12 @@ const theme = {
       family: "Roboto",
     },
     colors: {
-      brand: "#293F5B",
-      bronze: "#977E5E",
-      silver: "#989DA5",
-      copper: "#7D666D"
+      'brand': '#0254A4',
+      'blue-1': "#0254A4",
+      'blue-2': "#3676BA",
+      'blue-3': "#6092C6",
+      'blue-4': "#B2CBE1",
+      'blue-5': "#7CAAD1",
     }
   },
 }
