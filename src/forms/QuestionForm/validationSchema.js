@@ -5,5 +5,4 @@ export default yup.object().shape({
 	name: yup.string(),
 	email: yup.string().email('Email is not valid.').required('Required.'),
 	phone:  yup.string().matches(phoneRegExp, 'Phone number is not valid'),
-	question: yup.string().required('Required.')
 });

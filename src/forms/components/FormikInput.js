@@ -16,6 +16,7 @@ const FormikInput = ({ name, label }) => {
 					<TextInput
 						placeholder={label}
 						name={name}
+						value={meta.value}
 						onBlur={() => {
 							if (valueIsEmpty(meta.value)) {
 								form.setFieldError(name, undefined)
