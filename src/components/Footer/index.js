@@ -1,7 +1,9 @@
 import React from "react"
 import { Box, Text } from "grommet"
-import { useStaticQuery, Link } from "gatsby"
+import { useStaticQuery } from "gatsby"
+
 import { getCopyrightFromData, getFooterLinksFromData } from "./utils"
+import BasicLink from "../BasicLink"
 
 const Footer = () => {
 
@@ -40,21 +42,7 @@ const Footer = () => {
       >
         {
           links.map(item => (
-            <Text
-              size='10px'
-              key={item.path}
-            >
-              <Link
-                style={{
-                  textDecoration: "none",
-                  color: "black",
-                }}
-                to={item.path}
-                replace
-              >
-                {item.label}
-              </Link>
-            </Text>
+            <BasicLink size='10px' item={item} />
           ))
         }
       </Box>

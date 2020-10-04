@@ -1,29 +1,87 @@
 import React from "react"
-import { Heading, Box } from "grommet"
+import { Heading, Box, Text } from "grommet"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from 'gatsby-image';
+import BasicLink from "../components/BasicLink"
+import { Analytics, Article, Calendar } from "grommet-icons"
+
+const EXPLORE_LINKS = [
+  {
+    path: '/',
+    label: 'Learn about our services',
+    icon: <Article />
+  },
+  {
+    path: '/',
+    label: 'Schedule a meeting',
+    icon: <Calendar />
+  },
+  {
+    path: '/',
+    label: 'Explore our research',
+    icon: <Analytics />
+  },
+]
 
 const Home = () => {
+
+  const data = useStaticQuery(
+    graphql`
+      query HomeQuery {
+        file(relativePath: { eq: "sample_home_backdrop.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
   return (
-    <Box>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
-      <Heading margin='none'>dfd</Heading>
+    <Box
+      fill={true}
+      justify='center'
+      align='center'
+      gap='xlarge'
+    >
+      <Box
+        direction='row'
+        gap='large'
+        justify='center'
+        align='center'
+      >
+        <Box margin={{ bottom: 'large' }}>
+          <Heading margin={{ top: 'none', bottom: 'small' }}>
+            Automate your CI
+          </Heading>
+          <Box
+            width='medium'
+            margin={{ horizontal: 'xsmall' }}
+          >
+            <Text margin='none'>
+              Changing pharmaceutical analysis, one byte at a time.
+            </Text>
+          </Box>
+        </Box>
+        <Box
+          width='600px'
+          margin={{ left: 'medium' }}
+        >
+          <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
+        </Box>
+      </Box>
+      <Box
+        direction='row'
+        gap='xlarge'
+      >
+        {
+          EXPLORE_LINKS.map(item => (
+            <BasicLink item={item}/>
+          ))
+        }
+      </Box>
     </Box>
   )
 }
