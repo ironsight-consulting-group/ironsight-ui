@@ -4,26 +4,24 @@ import { Box } from "grommet"
 const Page = ({
   background,
   children
-}) => {
-  return (
+}) => (
+  <Box
+    flex={true}
+    background={background}
+    align='center'
+  >
     <Box
       flex={true}
-      background={background}
-      align='center'
-    >
-      <Box
-        flex={true}
-        width={{ max: '1600px' }}
-        pad='large'
-        fill='horizontal'
-        align='start'
-        overflow='auto'
+      width={{ max: '1600px' }}
+      pad='large'
+      fill='horizontal'
+      align='start'
+      overflow='auto'
 
-      >
-        {children}
-      </Box>
+    >
+      {children}
     </Box>
-  )
-}
+  </Box>
+)
 
 export default Page

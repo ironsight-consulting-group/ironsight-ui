@@ -11,7 +11,7 @@ const App = ({ children }) => (
     <StateProvider initialState={initialState} reducer={reducers}>
       <Box fill={true}>
         <Header />
-        <Page background='blue'>
+        <Page>
           {children}
         </Page>
         <Footer />

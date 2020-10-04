@@ -26,12 +26,8 @@ const Footer = () => {
   const links = getFooterLinksFromData(data);
   const copyright = getCopyrightFromData(data);
 
-  console.log(links);
-  console.log(copyright);
-
   return (
     <Box
-      // fill="horizontal"
       flex='shrink'
       justify="between"
       direction="row"

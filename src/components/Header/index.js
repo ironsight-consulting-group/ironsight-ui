@@ -46,6 +46,7 @@ const Header = () => {
       background="white"
       direction="row"
       align="center"
+      pad={{ vertical: 'small' }}
     >
       {size !== "small" ? (
         <DesktopHeader
