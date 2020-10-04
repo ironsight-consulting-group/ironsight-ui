@@ -31,6 +31,23 @@ module.exports = {
         ],
       },
     ],
+    footer: {
+      links: [
+        {
+          path: '/',
+          label: 'Terms & Conditions'
+        },
+        {
+          path: '/',
+          label: 'Cookie Policy'
+        },
+        {
+          path: '/',
+          label: 'Privacy Policy'
+        },
+      ],
+      copyright: '© 2020 Ironsight Consulting Group. All Rights Reserved.'
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

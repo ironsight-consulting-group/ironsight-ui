@@ -40,12 +40,8 @@ const Header = () => {
 
   return (
     <Box
-      // style={{
-      //   position: 'fixed',
-      //   zIndex: 2
-      // }}
       fill="horizontal"
-      height="xsmall"
+      flex="shrink"
       justify="between"
       background="white"
       direction="row"

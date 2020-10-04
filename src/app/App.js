@@ -1,16 +1,21 @@
 import React from "react"
-import { Grommet } from "grommet"
+import { Box, Grommet } from "grommet"
 
 import { StateProvider } from "./context"
 import theme from "./theme"
 import { reducers, initialState } from "../state"
-import Header from "../components/Header"
+import { Header, Page, Footer } from "../components"
 
 const App = ({ children }) => (
   <Grommet full={true} theme={theme}>
     <StateProvider initialState={initialState} reducer={reducers}>
-      <Header />
-      {children}
+      <Box fill={true}>
+        <Header />
+        <Page background='blue'>
+          {children}
+        </Page>
+        <Footer />
+      </Box>
     </StateProvider>
   </Grommet>
 )
