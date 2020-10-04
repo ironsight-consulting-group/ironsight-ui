@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Box, DropButton } from "grommet"
-
 import { Menu as MenuIcon } from "grommet-icons"
+
 import { getMobileLinks } from "./utils"
 
 const MobileMenu = ({ links, menus, ...rest }) => {

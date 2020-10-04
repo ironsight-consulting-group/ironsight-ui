@@ -1,6 +1,7 @@
 import React from "react"
 import { Box, Text } from "grommet"
 import { Link } from "gatsby"
+
 import { isActive } from "./utils"
 
 const Anchor = ({ item, ...rest }) => (
