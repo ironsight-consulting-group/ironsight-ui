@@ -39,8 +39,6 @@ const Header = () => {
   const getImage = useCallback(() => getImageFromData(data), [data]);
   const getMenus = useCallback(() => getMenusFromData(data), [data]);
 
-  console.log(size);
-
   return (
     <Box
       // style={{

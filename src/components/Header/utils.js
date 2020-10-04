@@ -52,11 +52,12 @@ export const getDesktopLinks = (links, menus) => {
   }, linkComponents);
 }
 
-export const getMobileLinks = (links, menus) => {
+export const getMobileLinks = (links, menus, onClick) => {
   const linkComponents = links.map(item => (
     <Anchor
       key={item.label}
       item={item}
+      onClick={onClick}
       pad='medium'
     />
   ))
@@ -65,6 +66,7 @@ export const getMobileLinks = (links, menus) => {
       key={item.label}
       items={item.subPaths}
       label={item.label}
+      onMenuItemClick={onClick}
       pad='medium'
     />
   ))
