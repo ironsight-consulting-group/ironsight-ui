@@ -4,7 +4,7 @@ import { Box, Grommet } from "grommet"
 import { StateProvider } from "./context"
 import theme from "./theme"
 import { reducers, initialState } from "../state"
-import { Header, Page, Footer } from "../components"
+import { Header, Page } from "../components"
 
 const App = ({ children }) => (
   <Grommet full={true} theme={theme}>
