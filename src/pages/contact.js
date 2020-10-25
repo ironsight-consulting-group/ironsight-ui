@@ -65,7 +65,7 @@ const Contact = () => {
           }
         </Box>
       </Box>
-      <Box margin={{ top: 'large' }}>
+      <Box margin={{ top: 'small' }}>
         <Box align='center'>
           <Heading level={3}>Have a question?</Heading>
           <QuestionForm onSubmit={handleSubmit} />

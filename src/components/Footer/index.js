@@ -30,11 +30,12 @@ const Footer = () => {
 
   return (
     <Box
+      fill='horizontal'
       flex='shrink'
       justify="between"
       direction="row"
       align="center"
-      margin={{ horizontal: 'small', vertical: 'xsmall' }}
+      pad={{ horizontal: 'small', vertical: 'xsmall' }}
     >
       <Box
         gap='small'

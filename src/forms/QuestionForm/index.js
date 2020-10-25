@@ -9,25 +9,35 @@ import { FormikInput } from "../components"
 const QuestionForm = ({ onSubmit }) => {
 	const size = useContext(ResponsiveContext);
 	return (
-		<Box width={size !== 'small' ? 'large' : undefined}>
-			<Formik
-				initialValues={{
-					name: '',
-					email: '',
-					phone: '',
-					question: '',
-				}}
-				validationSchema={validationSchema}
-				validateOnBlur={false}
-				validateOnChange={false}
-				onSubmit={onSubmit}
-			>
-				{
-					({ handleChange }) => {
-						return (
+		<Formik
+			initialValues={{
+				name: '',
+				email: '',
+				phone: '',
+				question: '',
+			}}
+			validationSchema={validationSchema}
+			validateOnBlur={false}
+			validateOnChange={false}
+			onSubmit={onSubmit}
+		>
+			{
+				({ handleChange }) => {
+					return (
+						<Box
+							width={size !== 'small' ? 'large' : '100%'}
+							pad={{ horizontal: 'small' }}
+						>
 							<Form>
-								<Box direction='row' gap='medium'>
-									<Box gap='small'>
+								<Box
+									fill={size !== 'small' ? false : 'horizontal'}
+									direction='row'
+									gap='medium'
+								>
+									<Box
+										fill={size !== 'small' ? false : 'horizontal'}
+										gap='small'
+									>
 										<FormikInput
 											name='name'
 											label='Name'
@@ -82,11 +92,11 @@ const QuestionForm = ({ onSubmit }) => {
 										}
 									</Box>
 							</Form>
-						)
-					}
+						</Box>
+					)
 				}
-			</Formik>
-		</Box>
+			}
+		</Formik>
 	)
 }
 

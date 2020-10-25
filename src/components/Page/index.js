@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from 'prop-types';
 import { Box } from "grommet"
+import { Footer } from "../index"
 
 const Page = ({
   background,
@@ -9,18 +10,19 @@ const Page = ({
   <Box
     flex={true}
     background={background}
+    overflow='auto'
     align='center'
   >
     <Box
-      flex={true}
+      flex='grow'
       width={{ max: '1600px' }}
-      pad='large'
+      pad={{ horizontal: 'large', vertical: 'medium' }}
       fill='horizontal'
       align='start'
-      overflow='auto'
     >
       {children}
     </Box>
+    <Footer />
   </Box>
 )
 
