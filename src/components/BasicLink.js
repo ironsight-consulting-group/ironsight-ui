@@ -1,31 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { Box, Text } from "grommet"
 
-const BasicLink = ({ item, ...rest }) => (
-	<Box
-		direction='row'
-		gap='small'
-	>
-		{item.icon}
-		<Text
-			key={item.path}
-			{...rest}
+const BasicLink = ({ item, ...rest }) => {
+
+	const [hovered, setHovered] = useState(false);
+	return (
+		<Box
+			direction='row'
+			gap='small'
+			onMouseEnter={() => setHovered(true)}
+			onMouseLeave={() => setHovered(false)}
 		>
-			<Link
-				style={{
-					textDecoration: "none",
-					color: "black",
-				}}
-				to={item.path}
-				replace
+			{item.icon}
+			<Text
+				key={item.path}
+				{...rest}
 			>
-				{item.label}
-			</Link>
-		</Text>
-	</Box>
-)
+				<Link
+					style={{
+						textDecoration: hovered ? 'underline' : 'none',
+						color: "black",
+					}}
+					to={item.path}
+					replace
+				>
+					{item.label}
+				</Link>
+			</Text>
+		</Box>
+	)
+}
 
 BasicLink.propTypes = {
 	item: PropTypes.shape({
