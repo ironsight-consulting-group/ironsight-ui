@@ -11,13 +11,13 @@ const CONTACT_INFO = [
     icon: <MailOption color='blue-3' />,
   },
   {
-    label: '412-305-3872',
-    href: 'tel:4123053872',
+    label: '631-792-2547',
+    href: 'tel:6317922547',
     icon: <PhoneVertical color='blue-3' />,
   },
   {
-    label: '1206 Pomona St, Fort Collins, CO 80521',
-    href: 'https://www.google.com/maps/place/1206+Pomona+St,+Fort+Collins,+CO+80521/@40.5972173,-105.1008937,17z/data=!3m1!4b1!4m5!3m4!1s0x87694a73b065dad3:0x6998078ca9fff80d!8m2!3d40.5972132!4d-105.098705',
+    label: '75 Merritt St, West Islip, New York 11795',
+    href: 'https://www.google.com/maps/place/75+Merritt+St,+West+Islip,+NY+11795/@40.6985146,-73.293962,18z/data=!4m13!1m7!3m6!1s0x89e82d4c16456c71:0x63e0eca0bfed444f!2s75+Merritt+St,+West+Islip,+NY+11795!3b1!8m2!3d40.6985126!4d-73.2928677!3m4!1s0x89e82d4c16456c71:0x63e0eca0bfed444f!8m2!3d40.6985126!4d-73.2928677',
     icon: <Map color='blue-3' />,
   },
 ];
