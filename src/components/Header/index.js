@@ -43,7 +43,7 @@ const Header = () => {
     <Box
       fill="horizontal"
       flex="shrink"
-      justify={size === 'small' ? 'between' : 'center'}
+      justify={size === 'small' ? 'between' : 'between'}
       background="white"
       direction="row"
       align="center"
