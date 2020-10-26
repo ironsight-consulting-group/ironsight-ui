@@ -16,7 +16,6 @@ const Page = ({
     <Box
       flex='grow'
       width={{ max: '1600px' }}
-      pad={{ horizontal: 'large', vertical: 'medium' }}
       fill='horizontal'
       align='start'
     >

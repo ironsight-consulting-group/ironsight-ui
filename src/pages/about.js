@@ -1,8 +1,68 @@
-import React from "react"
-import ComingSoon from "../components/ComingSoon"
+import React, { useContext } from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { Box, ResponsiveContext } from "grommet"
+import Img from "gatsby-image"
 
 const About = () => {
-  return <ComingSoon />
+
+  const size = useContext(ResponsiveContext)
+  const data = useStaticQuery(
+    graphql`
+      query AboutQuery {
+        pane_one: file(relativePath: { eq: "core_of_business.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pane_two: file(relativePath: { eq: "solutions_table.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pane_three: file(relativePath: { eq: "clinical_trial_graph.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pane_four: file(relativePath: { eq: "commercialization_support_graph.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        pane_five: file(relativePath: { eq: "competitive_insights_graph.png" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  )
+
+  console.log(data);
+
+  return (
+    <Box flex={false} fill={true}>
+      <Box
+        fill='horizontal'
+      >
+        <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
+        <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
+        <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />
+        <Img fluid={data.pane_four.childImageSharp.fluid} alt="Commercialization support" />
+        <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
+      </Box>
+    </Box>
+  )
 }
 
 export default About
