@@ -8,17 +8,17 @@ import { BasicLink, MobileBasicLink } from "../components"
 
 const EXPLORE_LINKS = [
   {
-    path: '/',
+    path: '/about',
     label: 'Learn about our services',
     icon: <Article color='blue-3' />
   },
   {
-    path: '/',
+    path: '/contact',
     label: 'Schedule a meeting',
     icon: <Calendar color='blue-3' />
   },
   {
-    path: '/',
+    path: '/about',
     label: 'Explore our research',
     icon: <Analytics color='blue-3' />
   },
