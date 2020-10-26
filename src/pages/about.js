@@ -1,11 +1,10 @@
-import React, { useContext } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Box, ResponsiveContext } from "grommet"
+import { Box } from "grommet"
 import Img from "gatsby-image"
 
 const About = () => {
 
-  const size = useContext(ResponsiveContext)
   const data = useStaticQuery(
     graphql`
       query AboutQuery {
@@ -54,12 +53,18 @@ const About = () => {
     <Box flex={false} fill={true}>
       <Box
         fill='horizontal'
+        pad={{ horizontal: 'large', bottom: 'medium' }}
       >
         <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
         <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
-        <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />
-        <Img fluid={data.pane_four.childImageSharp.fluid} alt="Commercialization support" />
-        <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
+        <Box
+          margin={{ top: 'medium' }}
+          gap='medium'
+        >
+          <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />
+          <Img fluid={data.pane_four.childImageSharp.fluid} alt="Commercialization support" />
+          <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
+        </Box>
       </Box>
     </Box>
   )

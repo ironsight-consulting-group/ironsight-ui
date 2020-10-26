@@ -35,8 +35,14 @@ const Contact = () => {
   };
 
   return (
-    <Box flex={false} fill={true}>
-      <Box flex={false} margin={{ horizontal: 'large' }}>
+    <Box
+      flex={false}
+      fill={true}
+    >
+      <Box
+        flex={false}
+        margin={{ horizontal: 'large', vertical: 'medium' }}
+      >
         <Box>
           <Heading level={2} margin={{ bottom: 'xsmall', top: 'none' }}>
             Contact us anytime, day or night.

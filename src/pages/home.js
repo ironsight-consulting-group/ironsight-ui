@@ -47,6 +47,7 @@ const Home = () => {
       justify='center'
       align='center'
       gap='xlarge'
+      pad={{ horizontal: 'large', vertical: 'medium' }}
     >
       <Box
         direction={size === 'small' ? 'column' : 'row'}
