@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import { Analytics, Article, Calendar } from "grommet-icons"
 
 import { BasicLink, MobileBasicLink } from "../components"
+import PageWrapper from "../components/PageWrapper"
 
 const EXPLORE_LINKS = [
   {
@@ -42,12 +43,11 @@ const Home = () => {
   )
 
   return (
+    <PageWrapper title='Home'>
     <Box
-      fill={true}
       justify='center'
       align='center'
       gap='xlarge'
-      pad={{ horizontal: 'large', vertical: 'medium' }}
     >
       <Box
         direction={size === 'small' ? 'column' : 'row'}
@@ -95,6 +95,7 @@ const Home = () => {
         }
       </Box>
     </Box>
+    </PageWrapper>
   )
 }
 

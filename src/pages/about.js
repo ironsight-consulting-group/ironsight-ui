@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Box } from "grommet"
 import Img from "gatsby-image"
+import PageWrapper from "../components/PageWrapper"
 
 const About = () => {
 
@@ -47,13 +48,13 @@ const About = () => {
     `
   )
 
-  console.log(data);
-
   return (
-    <Box flex={false} fill={true}>
+    <PageWrapper
+      title='About'
+      margin={{ horizontal: 'large', bottom: 'medium' }}
+    >
       <Box
         fill='horizontal'
-        pad={{ horizontal: 'large', bottom: 'medium' }}
       >
         <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
         <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
@@ -66,7 +67,7 @@ const About = () => {
           <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
         </Box>
       </Box>
-    </Box>
+    </PageWrapper>
   )
 }
 
