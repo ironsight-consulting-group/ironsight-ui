@@ -1,11 +1,87 @@
 import React, { useContext, useState } from "react"
 import PropTypes from "prop-types"
-import { Box, DropButton, ResponsiveContext } from "grommet"
+import { Box, DropButton, ResponsiveContext, Text } from "grommet"
 
 import noop from "lodash/noop"
+import compose from "lodash/fp/compose"
+import filter from "lodash/fp/filter"
+import map from "lodash/fp/map"
 
 import Anchor from "./Anchor"
 import { menuIsActive } from "./utils"
+
+const getMenuItemPadding = (index, items) => {
+  switch(index) {
+    case 0:
+      return {
+        horizontal: "medium",
+        top: "small",
+      };
+    case items.length:
+      return {
+        horizontal: "medium",
+        bottom: "small",
+      };
+    default:
+      return {
+        horizontal: "medium",
+        vertical: "small",
+      };
+  }
+}
+
+const getMenuItems = (links, onMenuItemClick, setOpen) => {
+  const topItems = compose(
+    (items => ([<Box key='0'>{items}</Box>])),
+    (items => (items.map((item, index) => (
+      <Anchor
+        key={item.label}
+        item={item}
+        onClick={() => {
+          setOpen(false)
+          onMenuItemClick()
+        }}
+        pad={getMenuItemPadding(index, items)}
+      />
+    )))),
+    filter(item => item.live)
+  )(links)
+  const bottomItems = compose(
+    (items => ([
+      <Box
+        key='1'
+        border={{
+          "color": "light-2",
+          "side": "top"
+        }}
+      >
+        <Box margin={{ top: 'small', horizontal: 'small' }}>
+          <Text
+            size='xsmall'
+            color='brand'
+            margin='none'
+          >
+            Coming soon!
+          </Text>
+        </Box>
+        {items}
+      </Box>
+    ])),
+    map(item => (
+      <Anchor
+        key={item.label}
+        item={item}
+        disabled={true}
+        pad={{
+          horizontal: "medium",
+          vertical: "small",
+        }}
+      />
+    )),
+    filter(item => !item.live)
+  )(links)
+  return topItems.concat(bottomItems);
+}
 
 const AnchorMenu = ({ items, label, onMenuItemClick, ...rest }) => {
   const size = useContext(ResponsiveContext)
@@ -30,20 +106,7 @@ const AnchorMenu = ({ items, label, onMenuItemClick, ...rest }) => {
               })()}
         dropContent={
           <Box>
-            {items.map(item => (
-              <Anchor
-                key={item.label}
-                item={item}
-                onClick={() => {
-                  setOpen(false)
-                  onMenuItemClick()
-                }}
-                pad={{
-                  horizontal: "medium",
-                  vertical: "small",
-                }}
-              />
-            ))}
+            {getMenuItems(items, onMenuItemClick, setOpen)}
           </Box>
         }
         dropProps={{
