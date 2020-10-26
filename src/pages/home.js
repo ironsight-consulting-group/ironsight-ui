@@ -8,17 +8,17 @@ import { BasicLink, MobileBasicLink } from "../components"
 
 const EXPLORE_LINKS = [
   {
-    path: '/',
+    path: '/about',
     label: 'Learn about our services',
     icon: <Article color='blue-3' />
   },
   {
-    path: '/',
+    path: '/contact',
     label: 'Schedule a meeting',
     icon: <Calendar color='blue-3' />
   },
   {
-    path: '/',
+    path: '/about',
     label: 'Explore our research',
     icon: <Analytics color='blue-3' />
   },
@@ -30,7 +30,7 @@ const Home = () => {
   const data = useStaticQuery(
     graphql`
       query HomeQuery {
-        file(relativePath: { eq: "sample_home_backdrop.jpg" }) {
+        file(relativePath: { eq: "home_backdrop.jpg" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -71,8 +71,8 @@ const Home = () => {
           </Box>
         </Box>
         <Box
-          width={size === 'small' ? '450px' : '600px'}
-          margin={{ left: 'medium' }}
+          width={size === 'small' ? '400px' : '500px'}
+          margin={{ left: 'small' }}
         >
           <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
         </Box>

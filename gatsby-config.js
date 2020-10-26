@@ -21,12 +21,19 @@ module.exports = {
         label: "Services",
         subPaths: [
           {
+            path: "/services/clinical-trial-recruitment",
+            label: "Clinical Trial Recruitment",
+            live: true,
+          },
+          {
             path: "/services/commercialization-consulting",
             label: "Commercialization Consulting",
+            live: true,
           },
           {
             path: "/services/competitive-insights",
             label: "Competitive Insights",
+            live: false,
           },
         ],
       },

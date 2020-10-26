@@ -13,7 +13,7 @@ const theme = {
       'blue-3': "#6092C6",
       'blue-4': "#B2CBE1",
       'blue-5': "#7CAAD1",
-    }
+    },
   },
 }
 

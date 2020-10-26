@@ -1,7 +1,8 @@
 import React from "react"
+import ComingSoon from "../../components/ComingSoon"
 
 const CompetitiveInsights = () => {
-  return <div>Commercialization Consulting</div>
+  return <ComingSoon />
 }
 
 export default CompetitiveInsights
