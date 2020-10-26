@@ -3,6 +3,9 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Box } from "grommet"
 import Img from "gatsby-image"
 import PageWrapper from "../components/PageWrapper"
+import { BasicLink } from "../components"
+import { Contact } from "grommet-icons"
+import MobileBasicLink from "../components/MobileBasicLink"
 
 const About = () => {
 
@@ -55,17 +58,25 @@ const About = () => {
     >
       <Box
         fill='horizontal'
+        gap='medium'
       >
         <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
         <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
-        <Box
-          margin={{ top: 'medium' }}
-          gap='medium'
-        >
-          <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />
-          <Img fluid={data.pane_four.childImageSharp.fluid} alt="Commercialization support" />
-          <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
-        </Box>
+        <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />
+        <Img fluid={data.pane_four.childImageSharp.fluid} alt="Commercialization support" />
+        <Img fluid={data.pane_five.childImageSharp.fluid} alt="Competitive insights" />
+      </Box>
+      <Box
+        align='center'
+        margin={{ top: 'large' }}
+      >
+      <MobileBasicLink
+        item={{
+          path: '/contact',
+          label: 'Contact us to learn more',
+          icon: <Contact color='blue-3' />
+        }}
+      />
       </Box>
     </PageWrapper>
   )
