@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 import { Analytics, Article, Calendar } from "grommet-icons"
 
 import { BasicLink, MobileBasicLink } from "../components"
+import PageWrapper from "../components/PageWrapper"
 
 const EXPLORE_LINKS = [
   {
@@ -42,14 +43,10 @@ const Home = () => {
   )
 
   return (
-    <Box
-      fill={true}
-      justify='center'
-      align='center'
-      gap='xlarge'
-    >
+    <PageWrapper title='Home'>
       <Box
         direction={size === 'small' ? 'column' : 'row'}
+        flex='grow'
         gap='large'
         justify='center'
         align='center'
@@ -77,23 +74,23 @@ const Home = () => {
           <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
         </Box>
       </Box>
-      <Box
-        direction={size === 'small' ? 'column' : 'row'}
-        gap={size === 'small' ? 'large' : 'xlarge'}
-        align={size === 'small' ? 'center' : 'start'}
-        margin={size === 'small' ? 'medium' : 'none'}
-      >
-        {
-          EXPLORE_LINKS.map(item => (
-            size === 'small' ? (
-              <MobileBasicLink key={item.label} item={item} />
-            ) : (
-              <BasicLink key={item.label} item={item}/>
-            )
-          ))
-        }
-      </Box>
-    </Box>
+      {/*<Box*/}
+        {/*direction={size === 'small' ? 'column' : 'row'}*/}
+        {/*gap={size === 'small' ? 'large' : 'xlarge'}*/}
+        {/*align={size === 'small' ? 'center' : 'start'}*/}
+        {/*margin={size === 'small' ? 'medium' : 'none'}*/}
+      {/*>*/}
+        {/*{*/}
+          {/*EXPLORE_LINKS.map(item => (*/}
+            {/*size === 'small' ? (*/}
+              {/*<MobileBasicLink key={item.label} item={item} />*/}
+            {/*) : (*/}
+              {/*<BasicLink key={item.label} item={item}/>*/}
+            {/*)*/}
+          {/*))*/}
+        {/*}*/}
+      {/*</Box>*/}
+    </PageWrapper>
   )
 }
 
