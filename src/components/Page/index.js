@@ -1,29 +1,32 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from 'prop-types';
-import { Box } from "grommet"
+import { Box, ResponsiveContext } from "grommet"
 import { Footer } from "../index"
 
 const Page = ({
   background,
   children
-}) => (
-  <Box
-    flex={true}
-    background={background}
-    overflow='auto'
-    align='center'
-  >
+}) => {
+  const size = useContext(ResponsiveContext);
+  return (
     <Box
-      flex='grow'
-      width={{ max: '1600px' }}
-      fill='horizontal'
-      align='start'
+      flex={true}
+      background={background}
+      overflow='auto'
+      align='center'
     >
-      {children}
+      <Box
+        flex='grow'
+        width={{ max: '1600px' }}
+        fill='horizontal'
+        align='start'
+      >
+        {children}
+      </Box>
+      {size !== "small" && <Footer />}
     </Box>
-    <Footer />
-  </Box>
-)
+  )
+}
 
 Page.propTypes = {
   children: PropTypes.object.isRequired,
