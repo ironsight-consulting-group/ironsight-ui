@@ -10,7 +10,7 @@ const PageWrapper = ({ children, title, margin }) => {
 		>
 			<Seo title={title} />
 			<Box
-				flex={false}
+				flex={true}
 				margin={margin || { horizontal: 'large', vertical: 'medium' }}
 			>
 				{children}

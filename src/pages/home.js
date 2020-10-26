@@ -44,13 +44,9 @@ const Home = () => {
 
   return (
     <PageWrapper title='Home'>
-    <Box
-      justify='center'
-      align='center'
-      gap='xlarge'
-    >
       <Box
         direction={size === 'small' ? 'column' : 'row'}
+        flex='grow'
         gap='large'
         justify='center'
         align='center'
@@ -78,23 +74,22 @@ const Home = () => {
           <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
         </Box>
       </Box>
-      <Box
-        direction={size === 'small' ? 'column' : 'row'}
-        gap={size === 'small' ? 'large' : 'xlarge'}
-        align={size === 'small' ? 'center' : 'start'}
-        margin={size === 'small' ? 'medium' : 'none'}
-      >
-        {
-          EXPLORE_LINKS.map(item => (
-            size === 'small' ? (
-              <MobileBasicLink key={item.label} item={item} />
-            ) : (
-              <BasicLink key={item.label} item={item}/>
-            )
-          ))
-        }
-      </Box>
-    </Box>
+      {/*<Box*/}
+        {/*direction={size === 'small' ? 'column' : 'row'}*/}
+        {/*gap={size === 'small' ? 'large' : 'xlarge'}*/}
+        {/*align={size === 'small' ? 'center' : 'start'}*/}
+        {/*margin={size === 'small' ? 'medium' : 'none'}*/}
+      {/*>*/}
+        {/*{*/}
+          {/*EXPLORE_LINKS.map(item => (*/}
+            {/*size === 'small' ? (*/}
+              {/*<MobileBasicLink key={item.label} item={item} />*/}
+            {/*) : (*/}
+              {/*<BasicLink key={item.label} item={item}/>*/}
+            {/*)*/}
+          {/*))*/}
+        {/*}*/}
+      {/*</Box>*/}
     </PageWrapper>
   )
 }
