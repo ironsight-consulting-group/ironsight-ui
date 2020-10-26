@@ -10,38 +10,22 @@ import map from "lodash/fp/map"
 import Anchor from "./Anchor"
 import { menuIsActive } from "./utils"
 
-const getMenuItemPadding = (index, items) => {
-  switch(index) {
-    case 0:
-      return {
-        horizontal: "medium",
-        top: "small",
-      };
-    case items.length:
-      return {
-        horizontal: "medium",
-        bottom: "small",
-      };
-    default:
-      return {
-        horizontal: "medium",
-        vertical: "small",
-      };
-  }
-}
-
 const getMenuItems = (links, onMenuItemClick, setOpen) => {
   const topItems = compose(
     (items => ([<Box key='0'>{items}</Box>])),
     (items => (items.map((item, index) => (
       <Anchor
+        hoverIndicator={true}
         key={item.label}
         item={item}
         onClick={() => {
           setOpen(false)
           onMenuItemClick()
         }}
-        pad={getMenuItemPadding(index, items)}
+        pad={{
+          horizontal: "medium",
+          vertical: "small",
+        }}
       />
     )))),
     filter(item => item.live)
@@ -60,6 +44,7 @@ const getMenuItems = (links, onMenuItemClick, setOpen) => {
             size='xsmall'
             color='brand'
             margin='none'
+            style={{ cursor: 'default' }}
           >
             Coming soon!
           </Text>
