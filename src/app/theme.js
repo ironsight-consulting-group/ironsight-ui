@@ -1,4 +1,4 @@
-import { base } from "grommet"
+import { grommet } from "grommet"
 import merge from "lodash/merge"
 
 const theme = {
@@ -22,4 +22,4 @@ const theme = {
   },
 }
 
-export default merge(base, theme);
+export default merge(grommet, theme);

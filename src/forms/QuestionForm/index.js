@@ -61,6 +61,7 @@ const QuestionForm = ({ onSubmit }) => {
 														name='question'
 														placeholder='Ask us anything!'
 														onChange={handleChange}
+														style={{ backgroundColor: 'white' }}
 														fill
 													/>
 												</Box>
@@ -85,6 +86,7 @@ const QuestionForm = ({ onSubmit }) => {
 														name='question'
 														placeholder='Ask us anything!'
 														onChange={handleChange}
+														style={{ backgroundColor: 'white' }}
 														fill
 													/>
 												</Box>

@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import { Anchor, Box, Heading, Text } from "grommet"
+import React, { useState, useContext } from "react"
+import { Anchor, Box, Heading, Text, ResponsiveContext } from "grommet"
 import { MailOption, PhoneVertical, Map } from 'grommet-icons';
 
 import { QuestionForm } from "../forms"
@@ -25,6 +25,7 @@ const CONTACT_INFO = [
 
 const Contact = () => {
 
+  const size = useContext(ResponsiveContext);
   const [submitMessage, setSubmitMessage] = useState(undefined);
 
   const handleSubmit = (values, { resetForm }) => {
@@ -35,7 +36,10 @@ const Contact = () => {
   };
 
   return (
-    <PageWrapper title='Contact Us'>
+    <PageWrapper
+      title='Contact Us'
+      showBackground={true}
+    >
       <Box flex={false}>
         <Box>
           <Heading level={2} margin={{ bottom: 'xsmall', top: 'none' }}>
