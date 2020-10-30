@@ -4,7 +4,7 @@ import merge from "lodash/merge"
 const theme = {
   global: {
     font: {
-      family: "Poppins",
+      family: "Poppins, san serif",
     },
     colors: {
       'brand': '#0254A4',
@@ -17,12 +17,9 @@ const theme = {
   },
   heading: {
     font: {
-      family: 'PoppinsRegular'
+      family: 'PoppinsRegular, sans serif'
     },
   },
 }
 
-const newTheme = merge(base, theme);
-console.log(base);
-
-export default newTheme;
+export default merge(base, theme);
