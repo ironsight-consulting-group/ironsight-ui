@@ -1,3 +1,28 @@
 #hide-content {
     visibility: hidden;
 }
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/Poppins-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url("../assets/Poppins-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "PoppinsMedium";
+    src: url("../assets/Poppins-Medium.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "PoppinsSemiBold";
+    src: url("../assets/Poppins-SemiBold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "PoppinsBold";
+    src: url("../assets/Poppins-Bold.ttf") format('truetype');
+}

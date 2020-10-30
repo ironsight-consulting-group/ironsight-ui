@@ -24,7 +24,7 @@ const Header = () => {
             }
           }
         }
-        file(relativePath: { eq: "ironsight_logo_blue.png" }) {
+        file(relativePath: { eq: "primary_logo.png" }) {
           childImageSharp {
             fluid(maxHeight: 100) {
               ...GatsbyImageSharpFluid
@@ -47,7 +47,7 @@ const Header = () => {
       background="white"
       direction="row"
       align="center"
-      pad={{ vertical: 'small' }}
+      pad={{ vertical: 'medium' }}
     >
       {size !== "small" ? (
         <DesktopHeader
