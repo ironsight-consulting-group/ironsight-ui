@@ -60,18 +60,7 @@ const About = () => {
         fill='horizontal'
         gap='medium'
       >
-        <Box
-          fill='horizontal'
-        >
-          <Heading size='small'>
-            We are in the business of creating actionable solutions for patients worldwide
-          </Heading>
-          <Box
-            margin={{ horizontal: 'xlarge' }}
-          >
-            <Map />
-          </Box>
-        </Box>
+        <Map />
         <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
         <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
         <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />

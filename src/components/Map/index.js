@@ -1,22 +1,46 @@
-import React, { useState } from "react"
-import { WorldMap } from "grommet"
-import { CONTINENT_NAMES, DEFAULT_COLOR } from "./constants"
-import { getContinentBody } from "./utils"
+import React, { useState, useContext } from "react"
+import { Box, Heading, ResponsiveContext, Text, WorldMap } from "grommet"
+import {
+	CONTINENT_DESCRIPTION_MAP,
+	ACTIVE_CONTINENT_NAMES,
+	DISABLED_CONTINENT_NAMES,
+	DEFAULT_COLOR,
+} from "./constants"
+import { getActiveContinentBody, getDisabledContinentBody } from "./utils"
 
 const Map = () => {
-	const [hovered, setHovered] = useState('');
+
+	const size = useContext(ResponsiveContext)
+	const [hovered, setHovered] = useState('North America');
 
 	return (
-		<WorldMap
+		<Box
 			fill='horizontal'
-			color={DEFAULT_COLOR}
-			continents={CONTINENT_NAMES.map(name => ({
-				name,
-				...getContinentBody(name, hovered, setHovered)
-			}))}
-			onSelectPlace={(lat, lon) => {}}
-			selectColor="brand"
-		/>
+		>
+			<Heading size='small'>
+				We are in the business of creating actionable solutions for patients worldwide
+			</Heading>
+			<Box
+				margin={{ horizontal: size !== 'small' ? 'xlarge' : 'none' }}
+			>
+				<WorldMap
+					fill='horizontal'
+					color={DEFAULT_COLOR}
+					continents={ACTIVE_CONTINENT_NAMES.map(name => ({
+						name,
+						...getActiveContinentBody(name, hovered, setHovered)
+					})).concat(DISABLED_CONTINENT_NAMES.map(name => ({
+						name,
+						...getDisabledContinentBody()
+					})))}
+					onSelectPlace={(lat, lon) => {}}
+					selectColor="brand"
+				/>
+				<Box margin={{ horizontal: size !== 'small' ? 'large' : 'none', top: 'medium' }}>
+					<Text weight='bold'>{CONTINENT_DESCRIPTION_MAP[hovered]}</Text>
+				</Box>
+			</Box>
+		</Box>
 	)
 }
 

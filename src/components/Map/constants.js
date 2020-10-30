@@ -1,9 +1,13 @@
 export const DEFAULT_COLOR = 'light-5'
-export const CONTINENT_NAMES = [
+export const ACTIVE_CONTINENT_NAMES = [
 	"Asia",
 	"Europe",
 	"North America",
 	"South America",
+];
+export const DISABLED_CONTINENT_NAMES = [
+	"Africa",
+	"Australia",
 ];
 export const CONTINENT_DESCRIPTION_MAP = {
 	"North America" : "Informing a biotechnology company that develops new treatments for multiple sclerosis about the current disease-specific commercial landscape using quantitative and qualitative measures on our proprietary platform.",
