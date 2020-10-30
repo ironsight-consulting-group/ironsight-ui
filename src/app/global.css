@@ -10,8 +10,11 @@ body {
     overflow: hidden;
 }
 
-#___gatsby {
-    height: calc(var(--vh, 1vh) * 100);
+#wrapper {
+    /*height: calc(var(--vh, 1vh) * 100);*/
+    min-height: 100vh;
+    /* mobile viewport bug fix */
+    min-height: -webkit-fill-available;
 }
 
 @font-face {

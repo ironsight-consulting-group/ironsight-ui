@@ -9,8 +9,12 @@ export const onInitialClientRender = () => {
   const item = document.getElementById("hide-content")
   item.removeAttribute("id")
 
-  const setHeight = () => document.documentElement.style.setProperty('--vh', `${window.innerHeight / 100}px`);
-  window.addEventListener('resize', setHeight);
-  window.addEventListener('orientationchange', setHeight);
+  // const setHeight = () => {
+  //   const val = window.innerHeight / 100;
+  //   console.log(val);
+  //   document.documentElement.style.setProperty('--vh', `${val}px`);
+  // }
+  // window.addEventListener('resize', setHeight);
+  // window.addEventListener('orientationchange', setHeight);
 }
 

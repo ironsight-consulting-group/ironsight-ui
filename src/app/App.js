@@ -7,7 +7,7 @@ import { reducers, initialState } from "../state"
 import { Header, Page } from "../components"
 
 const App = ({ children }) => (
-  <Grommet full={true} theme={theme}>
+  <Grommet id='wrapper' full={true} theme={theme}>
     <StateProvider initialState={initialState} reducer={reducers}>
       <Box fill={true}>
         <Header />
