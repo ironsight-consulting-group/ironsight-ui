@@ -1,3 +1,26 @@
 #hide-content {
     visibility: hidden;
 }
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/Poppins-Light.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "Metric";
+    src: url("../assets/Poppins-Medium.ttf") format('truetype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Metric";
+    src: url("../assets/Poppins-SemiBold.ttf") format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Metric";
+    src: url("../assets/Poppins-Bold.ttf") format('truetype');
+    font-weight: 700;
+}
