@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Box } from "grommet"
+import { Box, Heading, WorldMap } from "grommet"
 import Img from "gatsby-image"
 import PageWrapper from "../components/PageWrapper"
-import { BasicLink } from "../components"
+import { Map } from "../components"
 import { Contact } from "grommet-icons"
 import MobileBasicLink from "../components/MobileBasicLink"
 
@@ -60,6 +60,7 @@ const About = () => {
         fill='horizontal'
         gap='medium'
       >
+        <Map />
         <Img fluid={data.pane_one.childImageSharp.fluid} alt="The core of our business"  />
         <Img fluid={data.pane_two.childImageSharp.fluid} alt="Solutions table"  />
         <Img fluid={data.pane_three.childImageSharp.fluid} alt="Clinical trial recruitment" />

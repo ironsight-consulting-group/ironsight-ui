@@ -1,4 +1,4 @@
-import { grommet } from "grommet"
+import { base } from "grommet"
 import merge from "lodash/merge"
 
 const theme = {
@@ -13,6 +13,7 @@ const theme = {
       'blue-3': "#6092C6",
       'blue-4': "#B2CBE1",
       'blue-5': "#7CAAD1",
+      'focus': 'transparent',
     },
   },
   heading: {
@@ -20,6 +21,11 @@ const theme = {
       family: 'PoppinsRegular, sans serif'
     },
   },
+  worldMap: {
+    continent: {
+      active: '6px',
+    },
+  },
 }
 
-export default merge(grommet, theme);
+export default merge(base, theme);
