@@ -3,7 +3,15 @@
 }
 
 html {
+    height: 100vh;
+}
+
+body {
     overflow: hidden;
+}
+
+#___gatsby {
+    position: fixed;
     height: 100%;
 }
 
