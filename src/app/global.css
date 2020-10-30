@@ -2,6 +2,10 @@
     visibility: hidden;
 }
 
+body {
+    overflow: hidden;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url("../assets/Poppins-Light.ttf") format('truetype');
