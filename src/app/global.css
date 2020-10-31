@@ -8,12 +8,22 @@ html {
 
 body {
     margin: 0px;
+    height: 100%;
 
 }
 
-#wrapper {
-    height: 100vh;
+#___gatsby {
+    height: 100%;
 }
+
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
+/*#wrapper {*/
+    /*!*height: 100vh;*!*/
+    /*height: 100%;*/
+/*}*/
 
 #container {
     overflow: inherit !important;

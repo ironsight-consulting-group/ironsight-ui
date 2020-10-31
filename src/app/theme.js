@@ -1,5 +1,5 @@
 import { base } from "grommet"
-import merge from "lodash/merge"
+import { deepMerge } from "grommet/utils"
 
 const theme = {
   global: {
@@ -17,7 +17,7 @@ const theme = {
     },
     drop: {
       zIndex: '150',
-    }
+    },
   },
   heading: {
     font: {
@@ -29,6 +29,14 @@ const theme = {
       active: '6px',
     },
   },
+  grommet: {
+    something: 'else',
+    extend: () => `
+        height: 100%
+      `
+  }
 }
 
-export default merge(base, theme);
+console.log(deepMerge(base, theme))
+
+export default deepMerge(base, theme);
