@@ -8,10 +8,15 @@ html {
 
 body {
     margin: 0px;
+
 }
 
 #wrapper {
     height: 100vh;
+}
+
+#container {
+    overflow: inherit !important;
 }
 
 #header {

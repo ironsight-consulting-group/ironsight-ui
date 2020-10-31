@@ -21,6 +21,7 @@ const Page = ({
         width={{ max: '1600px' }}
         fill='horizontal'
         align='start'
+        style={{ overflow: 'hidden' }}
       >
         {children}
       </Box>
