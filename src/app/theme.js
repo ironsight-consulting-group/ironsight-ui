@@ -30,13 +30,10 @@ const theme = {
     },
   },
   grommet: {
-    something: 'else',
     extend: () => `
         height: 100%
       `
   }
 }
-
-console.log(deepMerge(base, theme))
 
 export default deepMerge(base, theme);

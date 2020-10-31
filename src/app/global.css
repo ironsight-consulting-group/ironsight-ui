@@ -4,7 +4,6 @@
 
 html {
     height: 100%;
-    -webkit-overflow-scrolling: touch
 }
 
 body {
@@ -28,7 +27,6 @@ body {
 
 #header {
     position: fixed;
-    -webkit-backface-visibility: hidden;
     z-index: 100;
 }
 
