@@ -31,7 +31,4 @@ const theme = {
   },
 }
 
-const output = merge(base, theme);
-console.log(output);
-
-export default output;
+export default merge(base, theme);

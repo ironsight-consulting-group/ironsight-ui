@@ -41,6 +41,7 @@ const Header = () => {
 
   return (
     <Box
+      id='header'
       fill="horizontal"
       flex="shrink"
       justify='between'
@@ -48,7 +49,6 @@ const Header = () => {
       direction="row"
       align="center"
       pad={{ vertical: 'medium' }}
-      style={{ position: 'fixed', zIndex: 100 }}
     >
       {size !== "small" ? (
         <DesktopHeader
