@@ -20,13 +20,10 @@ body {
     height: 100%;
 }
 
-#container {
-    overflow: inherit !important;
-    margin-top: 125px;
-}
-
 #header {
-    position: fixed;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
 
