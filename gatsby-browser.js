@@ -9,14 +9,14 @@ export const onInitialClientRender = () => {
   const item = document.getElementById("hide-content")
   item.removeAttribute("id")
 
-  const setHeight = () => {
-    const header = document.getElementById('header')
-    const container = document.getElementById('container')
-    const val = header.clientHeight;
-    container.style.setProperty('margin-top', `${val}px`);
-  }
-  setTimeout(() => setHeight(), 25);
-  window.addEventListener('resize', setHeight);
-  window.addEventListener('orientationchange', setHeight);
+  // const setHeight = () => {
+  //   const header = document.getElementById('header')
+  //   const container = document.getElementById('container')
+  //   const val = header.clientHeight;
+  //   container.style.setProperty('margin-top', `${val}px`);
+  // }
+  // setTimeout(() => setHeight(), 25);
+  // window.addEventListener('resize', setHeight);
+  // window.addEventListener('orientationchange', setHeight);
 }
 
