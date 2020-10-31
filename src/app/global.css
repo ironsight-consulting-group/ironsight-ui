@@ -4,16 +4,16 @@
 
 html {
     height: 100%;
-
+    width: 100%;
 }
 
 body {
-    /*overflow: hidden;*/
+    margin: 0px;
 }
 
-/*#wrapper {*/
-    /*height: calc(var(--vh, 1vh) * 100);*/
-/*}*/
+#wrapper {
+    height: 100vh;
+}
 
 @font-face {
     font-family: "Poppins";

@@ -15,6 +15,9 @@ const theme = {
       'blue-5': "#7CAAD1",
       'focus': 'transparent',
     },
+    drop: {
+      zIndex: '150',
+    }
   },
   heading: {
     font: {
@@ -28,4 +31,7 @@ const theme = {
   },
 }
 
-export default merge(base, theme);
+const output = merge(base, theme);
+console.log(output);
+
+export default output;

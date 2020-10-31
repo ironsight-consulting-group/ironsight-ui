@@ -48,6 +48,7 @@ const Header = () => {
       direction="row"
       align="center"
       pad={{ vertical: 'medium' }}
+      style={{ position: 'fixed', zIndex: 100 }}
     >
       {size !== "small" ? (
         <DesktopHeader
