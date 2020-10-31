@@ -20,11 +20,6 @@ body {
     height: 100%;
 }
 
-/*#wrapper {*/
-    /*!*height: 100vh;*!*/
-    /*height: 100%;*/
-/*}*/
-
 #container {
     overflow: inherit !important;
     margin-top: 125px;
@@ -32,7 +27,7 @@ body {
 
 #header {
     position: fixed;
-    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
     z-index: 100;
 }
 
