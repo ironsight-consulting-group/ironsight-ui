@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { Box, Heading, WorldMap } from "grommet"
+import { Box } from "grommet"
 import Img from "gatsby-image"
 import PageWrapper from "../components/PageWrapper"
 import { Map } from "../components"

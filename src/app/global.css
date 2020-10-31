@@ -2,6 +2,34 @@
     visibility: hidden;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+
+}
+
+#___gatsby {
+    height: 100%;
+}
+
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
+#container {
+    overflow: inherit !important;
+    margin-top: 125px;
+}
+
+#header {
+    position: fixed;
+    z-index: 100;
+}
+
 @font-face {
     font-family: "Poppins";
     src: url("../assets/Poppins-Light.ttf") format('truetype');

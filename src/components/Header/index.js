@@ -41,6 +41,7 @@ const Header = () => {
 
   return (
     <Box
+      id='header'
       fill="horizontal"
       flex="shrink"
       justify='between'

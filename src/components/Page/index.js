@@ -10,6 +10,7 @@ const Page = ({
   const size = useContext(ResponsiveContext);
   return (
     <Box
+      id='container'
       flex={true}
       background={background}
       overflow='auto'
