@@ -8,6 +8,16 @@ import MobileMenu from "./MobileMenu"
 
 const MobileHeader = ({ links, logo, menus }) => (
   <Fragment>
+    <Box
+      fill='horizontal'
+      direction='row'
+      justify='between'
+      align='center'
+      style={{
+        paddingTop: '100px',
+        marginTop: '-100px',
+      }}
+    >
     <Box margin={{ left: "large" }}>
       <MobileMenu links={links} menus={menus} />
     </Box>
@@ -16,6 +26,7 @@ const MobileHeader = ({ links, logo, menus }) => (
         <Img fluid={logo} alt="Ironsight Logo" />
       </Box>
     </Button>
+    </Box>
   </Fragment>
 )
 
