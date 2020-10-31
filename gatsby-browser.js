@@ -15,7 +15,7 @@ export const onInitialClientRender = () => {
     const val = header.clientHeight;
     container.style.setProperty('margin-top', `${val}px`);
   }
-  setHeight();
+  setTimeout(() => setHeight(), 25);
   window.addEventListener('resize', setHeight);
   window.addEventListener('orientationchange', setHeight);
 }
