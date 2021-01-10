@@ -1,17 +1,17 @@
 import React from "react"
+import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 import { Box } from "grommet"
 import { Contact } from "grommet-icons"
-import Img from "gatsby-image"
 
 import { MobileBasicLink, PageWrapper } from "../../components"
 
-const CompetitiveInsights = () => {
+const CommercializationSupport = () => {
 
   const data = useStaticQuery(
     graphql`
-      query CompetitiveInsightsQuery {
-        image: file(relativePath: { eq: "competitive_insights_graph.png" }) {
+      query CommercializationSupportQuery {
+        image: file(relativePath: { eq: "commercialization_support_graph.png" }) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -24,14 +24,14 @@ const CompetitiveInsights = () => {
 
   return (
     <PageWrapper
-      title='Competitive Insights'
+      title='Commercialization Support'
       margin={{ horizontal: 'large', bottom: 'medium' }}
     >
       <Box
         fill='horizontal'
         gap='medium'
       >
-        <Img fluid={data.image.childImageSharp.fluid} alt="Stay up to date with current trends"  />
+        <Img fluid={data.image.childImageSharp.fluid} alt="Providing insightful, flexible solutions"  />
       </Box>
       <Box
         align='center'
@@ -49,4 +49,4 @@ const CompetitiveInsights = () => {
   )
 }
 
-export default CompetitiveInsights
+export default CommercializationSupport

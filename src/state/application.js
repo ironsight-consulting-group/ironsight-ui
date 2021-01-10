@@ -1,13 +1,21 @@
-export const state = {}
+import types from "./types"
+
+export const state = {
+  layer: undefined,
+}
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    // case 'changeTheme':
-    //   return {
-    //     ...state,
-    //     theme: action.theme
-    //   };
-
+    case types.SET_LAYER:
+      return {
+        ...state,
+        layer: action.data
+      };
+    case types.CLEAR_LAYER:
+      return {
+        ...state,
+        layer: undefined
+      };
     default:
       return state
   }

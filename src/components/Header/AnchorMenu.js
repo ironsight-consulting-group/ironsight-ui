@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { Fragment, useContext, useState } from "react"
 import PropTypes from "prop-types"
 import { Box, DropButton, ResponsiveContext, Text } from "grommet"
 
@@ -32,25 +32,30 @@ const getMenuItems = (links, onMenuItemClick, setOpen) => {
   )(links)
   const bottomItems = compose(
     (items => ([
-      <Box
-        key='1'
-        border={{
-          "color": "light-2",
-          "side": "top"
-        }}
-      >
-        <Box margin={{ top: 'small', horizontal: 'small' }}>
-          <Text
-            size='xsmall'
-            color='brand'
-            margin='none'
-            style={{ cursor: 'default' }}
-          >
-            Coming soon!
-          </Text>
-        </Box>
-        {items}
-      </Box>
+      <Fragment key='1'>
+        {
+          !!items.length && (
+            <Box
+              border={{
+                "color": "light-2",
+                "side": "top"
+              }}
+            >
+              <Box margin={{ top: 'small', horizontal: 'small' }}>
+                <Text
+                  size='xsmall'
+                  color='brand'
+                  margin='none'
+                  style={{ cursor: 'default' }}
+                >
+                  Coming soon!
+                </Text>
+              </Box>
+              {items}
+            </Box>
+          )
+        }
+      </Fragment>
     ])),
     map(item => (
       <Anchor

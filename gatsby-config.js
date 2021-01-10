@@ -21,19 +21,19 @@ module.exports = {
         label: "Services",
         subPaths: [
           {
-            path: "/services/clinical-trial-recruitment",
-            label: "Clinical Trial Recruitment",
+            path: "/services/health-informatics",
+            label: "Health Informatics Solutions",
             live: true,
           },
           {
-            path: "/services/commercialization-consulting",
-            label: "Commercialization Consulting",
+            path: "/services/commercialization-support",
+            label: "Commercialization Support",
             live: true,
           },
           {
             path: "/services/competitive-insights",
             label: "Competitive Insights",
-            live: false,
+            live: true,
           },
         ],
       },
@@ -41,16 +41,12 @@ module.exports = {
     footer: {
       links: [
         {
-          path: '/',
+          layer: 'TERMS_AND_CONDITIONS',
           label: 'Terms & Conditions'
         },
         {
-          path: '/',
+          layer: 'COOKIE_POLICY',
           label: 'Cookie Policy'
-        },
-        {
-          path: '/',
-          label: 'Privacy Policy'
         },
       ],
       copyright: '© 2020 Ironsight Consulting Group. All Rights Reserved.'

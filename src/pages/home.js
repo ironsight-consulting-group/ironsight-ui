@@ -56,14 +56,14 @@ const Home = () => {
           align={size === 'small' ? 'center' : 'start'}
         >
           <Heading margin={{ top: 'none', bottom: 'small' }}>
-            Automate your CI
+            Experts where you need them
           </Heading>
           <Box
-            width='medium'
+            // width='medium'
             margin={{ horizontal: 'xsmall' }}
           >
             <Text margin='none'>
-              Changing pharmaceutical analysis, one byte at a time.
+              Changing the way we think about pharmaceuticals, one byte at a time.
             </Text>
           </Box>
         </Box>
