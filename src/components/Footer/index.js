@@ -3,7 +3,7 @@ import { Box, Text } from "grommet"
 import { useStaticQuery } from "gatsby"
 
 import { getCopyrightFromData, getFooterLinksFromData } from "./utils"
-import BasicLink from "../BasicLink"
+import LayerLauncher from "../LayerLauncher"
 
 const Footer = () => {
 
@@ -14,7 +14,7 @@ const Footer = () => {
             siteMetadata {
               footer {
                 links {
-                  path
+                  layer
                   label
                 }
                 copyright
@@ -43,7 +43,7 @@ const Footer = () => {
       >
         {
           links.map(item => (
-            <BasicLink
+            <LayerLauncher
               key={item.label}
               item={item}
               size='10px'

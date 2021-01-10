@@ -1,6 +1,9 @@
 import React from "react"
 import { Box, Layer, Markdown } from "grommet"
 
+import types from '../state/types';
+import { useStateContext } from "../app/context"
+
 const CONTENT = `
 ## Terms and Conditions ("Terms")
 
@@ -32,9 +35,15 @@ If you have any questions about these Terms, please contact us.
 `
 
 const TermsAndConditions = () => {
+
+	const [_, dispatch] = useStateContext();
+
 	return (
-		<Layer>
-			<Box overflow='scroll'>
+		<Layer onClickOutside={() => dispatch({ type: types.CLEAR_LAYER })}>
+			<Box
+				overflow='scroll'
+				pad='medium'
+			>
 				<Markdown>{CONTENT}</Markdown>
 			</Box>
 		</Layer>

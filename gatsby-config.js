@@ -41,16 +41,12 @@ module.exports = {
     footer: {
       links: [
         {
-          path: '/',
+          layer: 'TERMS_AND_CONDITIONS',
           label: 'Terms & Conditions'
         },
         {
           path: '/',
           label: 'Cookie Policy'
-        },
-        {
-          path: '/',
-          label: 'Privacy Policy'
         },
       ],
       copyright: '© 2020 Ironsight Consulting Group. All Rights Reserved.'
