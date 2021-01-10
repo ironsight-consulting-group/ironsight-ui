@@ -1,8 +1,8 @@
 import React from "react"
 import ComingSoon from "../../components/ComingSoon"
 
-const ClinicalTrialRecruitment = () => {
+const HealthInformatics = () => {
 	return <ComingSoon />
 }
 
-export default ClinicalTrialRecruitment
+export default HealthInformatics

@@ -21,8 +21,8 @@ module.exports = {
         label: "Services",
         subPaths: [
           {
-            path: "/services/clinical-trial-recruitment",
-            label: "Clinical Trial Recruitment",
+            path: "/services/health-informatics",
+            label: "Health Informatics Solutions",
             live: true,
           },
           {
