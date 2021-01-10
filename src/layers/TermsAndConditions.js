@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Heading, Markdown } from "grommet"
+import { Box, Layer, Markdown } from "grommet"
 
 const CONTENT = `
 ## Terms and Conditions ("Terms")
@@ -33,9 +33,11 @@ If you have any questions about these Terms, please contact us.
 
 const TermsAndConditions = () => {
 	return (
-		<Box>
-			<Markdown>{CONTENT}</Markdown>
-		</Box>
+		<Layer>
+			<Box overflow='scroll'>
+				<Markdown>{CONTENT}</Markdown>
+			</Box>
+		</Layer>
 	)
 }
 
