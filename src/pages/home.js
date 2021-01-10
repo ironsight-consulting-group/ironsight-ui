@@ -6,6 +6,7 @@ import { Analytics, Article, Calendar } from "grommet-icons"
 
 import { BasicLink, MobileBasicLink } from "../components"
 import PageWrapper from "../components/PageWrapper"
+import TermsAndConditions from "../layers/TermsAndConditions"
 
 const EXPLORE_LINKS = [
   {
@@ -74,6 +75,7 @@ const Home = () => {
           <Img fluid={data.file.childImageSharp.fluid} alt="Home Backdrop"  />
         </Box>
       </Box>
+      <TermsAndConditions />
       {/*<Box*/}
         {/*direction={size === 'small' ? 'column' : 'row'}*/}
         {/*gap={size === 'small' ? 'large' : 'xlarge'}*/}

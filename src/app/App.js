@@ -4,16 +4,18 @@ import { Box, Grommet } from "grommet"
 import { StateProvider } from "./context"
 import theme from "./theme"
 import { reducers, initialState } from "../state"
-import { Header, Page } from "../components"
+import { Header, Page, LayerProvider } from "../components"
 
 const App = ({ children }) => (
   <Grommet full theme={theme}>
     <StateProvider initialState={initialState} reducer={reducers}>
       <Box fill={true}>
-        <Header />
-        <Page>
-          {children}
-        </Page>
+        <LayerProvider>
+          <Header />
+          <Page>
+            {children}
+          </Page>
+        </LayerProvider>
       </Box>
     </StateProvider>
   </Grommet>
