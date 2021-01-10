@@ -1,8 +1,8 @@
 import React from "react"
 import ComingSoon from "../../components/ComingSoon"
 
-const CommercializationConsulting = () => {
+const CommercializationSupport = () => {
   return <ComingSoon />
 }
 
-export default CommercializationConsulting
+export default CommercializationSupport

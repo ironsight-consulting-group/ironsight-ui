@@ -26,8 +26,8 @@ module.exports = {
             live: true,
           },
           {
-            path: "/services/commercialization-consulting",
-            label: "Commercialization Consulting",
+            path: "/services/commercialization-support",
+            label: "Commercialization Support",
             live: true,
           },
           {
