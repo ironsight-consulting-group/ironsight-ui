@@ -45,7 +45,7 @@ module.exports = {
           label: 'Terms & Conditions'
         },
         {
-          path: '/',
+          layer: 'COOKIE_POLICY',
           label: 'Cookie Policy'
         },
       ],
