@@ -33,7 +33,7 @@ module.exports = {
           {
             path: "/services/competitive-insights",
             label: "Competitive Insights",
-            live: false,
+            live: true,
           },
         ],
       },
