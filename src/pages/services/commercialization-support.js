@@ -7,11 +7,12 @@ import { Contact } from "grommet-icons"
 import { MobileBasicLink, PageWrapper } from "../../components"
 
 const CommercializationSupport = () => {
-
   const data = useStaticQuery(
     graphql`
       query CommercializationSupportQuery {
-        image: file(relativePath: { eq: "commercialization_support_graph.png" }) {
+        image: file(
+          relativePath: { eq: "commercialization_support_graph.png" }
+        ) {
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
@@ -24,24 +25,21 @@ const CommercializationSupport = () => {
 
   return (
     <PageWrapper
-      title='Commercialization Support'
-      margin={{ horizontal: 'large', bottom: 'medium' }}
+      title="Commercialization Support"
+      margin={{ horizontal: "large", bottom: "medium" }}
     >
-      <Box
-        fill='horizontal'
-        gap='medium'
-      >
-        <Img fluid={data.image.childImageSharp.fluid} alt="Providing insightful, flexible solutions"  />
+      <Box fill="horizontal" gap="medium">
+        <Img
+          fluid={data.image.childImageSharp.fluid}
+          alt="Providing insightful, flexible solutions"
+        />
       </Box>
-      <Box
-        align='center'
-        margin={{ top: 'large' }}
-      >
+      <Box align="center" margin={{ top: "large" }}>
         <MobileBasicLink
           item={{
-            path: '/contact',
-            label: 'Contact us to learn more',
-            icon: <Contact color='blue-3' />
+            path: "/contact",
+            label: "Contact us to learn more",
+            icon: <Contact color="blue-3" />,
           }}
         />
       </Box>

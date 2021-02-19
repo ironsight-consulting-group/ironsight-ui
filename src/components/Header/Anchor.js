@@ -31,11 +31,11 @@ Anchor.propTypes = {
     path: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
   }).isRequired,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 }
 
 Anchor.defaultProps = {
-  disabled: false
+  disabled: false,
 }
 
 export default Anchor

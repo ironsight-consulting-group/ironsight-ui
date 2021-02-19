@@ -12,9 +12,7 @@ const App = ({ children }) => (
       <Box fill={true}>
         <LayerProvider>
           <Header />
-          <Page>
-            {children}
-          </Page>
+          <Page>{children}</Page>
         </LayerProvider>
       </Box>
     </StateProvider>

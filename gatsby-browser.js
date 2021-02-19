@@ -19,4 +19,3 @@ export const onInitialClientRender = () => {
   // window.addEventListener('resize', setHeight);
   // window.addEventListener('orientationchange', setHeight);
 }
-

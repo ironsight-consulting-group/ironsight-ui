@@ -41,14 +41,14 @@ const Header = () => {
 
   return (
     <Box
-      id='header'
+      id="header"
       fill="horizontal"
       flex="shrink"
-      justify='between'
+      justify="between"
       background="white"
       direction="row"
       align="center"
-      pad={{ vertical: 'medium' }}
+      pad={{ vertical: "medium" }}
     >
       {size !== "small" ? (
         <DesktopHeader

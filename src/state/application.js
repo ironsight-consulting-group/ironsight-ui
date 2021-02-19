@@ -9,13 +9,13 @@ export const reducer = (state, action) => {
     case types.SET_LAYER:
       return {
         ...state,
-        layer: action.data
-      };
+        layer: action.data,
+      }
     case types.CLEAR_LAYER:
       return {
         ...state,
-        layer: undefined
-      };
+        layer: undefined,
+      }
     default:
       return state
   }

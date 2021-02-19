@@ -4,31 +4,25 @@ import { Link } from "gatsby"
 import { Box, Button } from "grommet"
 
 const BasicLink = ({ item, ...rest }) => (
-	<Box
-		direction='row'
-		gap='small'
-	>
-		<Link
-			to={item.path}
-			replace
-		>
-			<Button
-				primary
-				key={item.path}
-				label={item.label}
-				icon={item.icon}
-				{...rest}
-			/>
-		</Link>
-	</Box>
+  <Box direction="row" gap="small">
+    <Link to={item.path} replace>
+      <Button
+        primary
+        key={item.path}
+        label={item.label}
+        icon={item.icon}
+        {...rest}
+      />
+    </Link>
+  </Box>
 )
 
 BasicLink.propTypes = {
-	item: PropTypes.shape({
-		path: PropTypes.string.isRequired,
-		label: PropTypes.string.isRequired,
-		icon: PropTypes.node,
-	}).isRequired,
+  item: PropTypes.shape({
+    path: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    icon: PropTypes.node,
+  }).isRequired,
 }
 
 export default BasicLink
