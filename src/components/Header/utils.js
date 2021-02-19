@@ -24,11 +24,11 @@ export const isActive = ({ isCurrent, isPartiallyCurrent, href }) => {
 }
 
 export const menuIsActive = label => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     const paths = window.location.pathname.split("/")
     return paths[1].toLowerCase() === label.toLowerCase() ? activeStyle : {}
   }
-  return {};
+  return {}
 }
 
 export const getImageFromData = get("file.childImageSharp.fluid")

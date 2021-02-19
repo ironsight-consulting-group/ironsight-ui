@@ -12,51 +12,50 @@ import { menuIsActive } from "./utils"
 
 const getMenuItems = (links, onMenuItemClick, setOpen) => {
   const topItems = compose(
-    (items => ([<Box key='0'>{items}</Box>])),
-    (items => (items.map((item, index) => (
-      <Anchor
-        hoverIndicator={true}
-        key={item.label}
-        item={item}
-        onClick={() => {
-          setOpen(false)
-          onMenuItemClick()
-        }}
-        pad={{
-          horizontal: "medium",
-          vertical: "small",
-        }}
-      />
-    )))),
+    items => [<Box key="0">{items}</Box>],
+    items =>
+      items.map((item, index) => (
+        <Anchor
+          hoverIndicator={true}
+          key={item.label}
+          item={item}
+          onClick={() => {
+            setOpen(false)
+            onMenuItemClick()
+          }}
+          pad={{
+            horizontal: "medium",
+            vertical: "small",
+          }}
+        />
+      )),
     filter(item => item.live)
   )(links)
   const bottomItems = compose(
-    (items => ([
-      <Fragment key='1'>
-        {
-          !!items.length && (
-            <Box
-              border={{
-                "color": "light-2",
-                "side": "top"
-              }}
-            >
-              <Box margin={{ top: 'small', horizontal: 'small' }}>
-                <Text
-                  size='xsmall'
-                  color='brand'
-                  margin='none'
-                  style={{ cursor: 'default' }}
-                >
-                  Coming soon!
-                </Text>
-              </Box>
-              {items}
+    items => [
+      <Fragment key="1">
+        {!!items.length && (
+          <Box
+            border={{
+              color: "light-2",
+              side: "top",
+            }}
+          >
+            <Box margin={{ top: "small", horizontal: "small" }}>
+              <Text
+                size="xsmall"
+                color="brand"
+                margin="none"
+                style={{ cursor: "default" }}
+              >
+                Coming soon!
+              </Text>
             </Box>
-          )
-        }
-      </Fragment>
-    ])),
+            {items}
+          </Box>
+        )}
+      </Fragment>,
+    ],
     map(item => (
       <Anchor
         key={item.label}
@@ -70,7 +69,7 @@ const getMenuItems = (links, onMenuItemClick, setOpen) => {
     )),
     filter(item => !item.live)
   )(links)
-  return topItems.concat(bottomItems);
+  return topItems.concat(bottomItems)
 }
 
 const AnchorMenu = ({ items, label, onMenuItemClick, ...rest }) => {
@@ -94,11 +93,7 @@ const AnchorMenu = ({ items, label, onMenuItemClick, ...rest }) => {
                 top: "bottom",
                 left: "left",
               })()}
-        dropContent={
-          <Box>
-            {getMenuItems(items, onMenuItemClick, setOpen)}
-          </Box>
-        }
+        dropContent={<Box>{getMenuItems(items, onMenuItemClick, setOpen)}</Box>}
         dropProps={{
           responsive: true,
           onClickOutside: () => setOpen(false),

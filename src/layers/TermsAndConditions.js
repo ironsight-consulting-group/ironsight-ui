@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Layer, Markdown } from "grommet"
 
-import types from '../state/types';
+import types from "../state/types"
 import { useStateContext } from "../app/context"
 
 const CONTENT = `
@@ -35,19 +35,15 @@ If you have any questions about these Terms, please contact us.
 `
 
 const TermsAndConditions = () => {
+  const [_, dispatch] = useStateContext()
 
-	const [_, dispatch] = useStateContext();
-
-	return (
-		<Layer onClickOutside={() => dispatch({ type: types.CLEAR_LAYER })}>
-			<Box
-				overflow='scroll'
-				pad='medium'
-			>
-				<Markdown>{CONTENT}</Markdown>
-			</Box>
-		</Layer>
-	)
+  return (
+    <Layer onClickOutside={() => dispatch({ type: types.CLEAR_LAYER })}>
+      <Box overflow="scroll" pad="medium">
+        <Markdown>{CONTENT}</Markdown>
+      </Box>
+    </Layer>
+  )
 }
 
 export default TermsAndConditions

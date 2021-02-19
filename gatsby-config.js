@@ -41,16 +41,16 @@ module.exports = {
     footer: {
       links: [
         {
-          layer: 'TERMS_AND_CONDITIONS',
-          label: 'Terms & Conditions'
+          layer: "TERMS_AND_CONDITIONS",
+          label: "Terms & Conditions",
         },
         {
-          layer: 'COOKIE_POLICY',
-          label: 'Cookie Policy'
+          layer: "COOKIE_POLICY",
+          label: "Cookie Policy",
         },
       ],
-      copyright: '© 2020 Ironsight Consulting Group. All Rights Reserved.'
-    }
+      copyright: "© 2020 Ironsight Consulting Group. All Rights Reserved.",
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
