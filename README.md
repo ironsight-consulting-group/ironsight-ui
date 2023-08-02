@@ -1,6 +1,6 @@
-# Ironsight Consulting Group UI
+# Ironsight Therapeutics UI
 
-This is the landing page for the Ironsight Consulting Group, available at www.ironsightgroup.com.
+This is the landing page for Ironsight Therapeutics, available at www.ironsightgroup.com.
 
 ### Development Environment
 
