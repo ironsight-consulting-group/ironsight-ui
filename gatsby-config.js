@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ironsight Consulting Group`,
+    title: `Ironsight Therapeutics`,
     description: `Automate your pharmaceutical consulting needs.`,
     author: `michaelplazek`,
     links: [
@@ -49,7 +49,7 @@ module.exports = {
           label: "Cookie Policy",
         },
       ],
-      copyright: "© 2020 Ironsight Consulting Group. All Rights Reserved.",
+      copyright: "© 2020 Ironsight Therapeutics. All Rights Reserved.",
     },
   },
   plugins: [
