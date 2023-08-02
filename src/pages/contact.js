@@ -7,8 +7,8 @@ import PageWrapper from "../components/PageWrapper"
 
 const CONTACT_INFO = [
   {
-    label: "info@ironsightcg.com",
-    href: "mailto:info@ironsightcg.com",
+    label: "info@ironsightgroup.com",
+    href: "mailto:info@ironsightgroup.com",
     icon: <MailOption color="blue-3" />,
   },
   // Example of additional contact items in the list
@@ -18,8 +18,8 @@ const CONTACT_INFO = [
   //   icon: <PhoneVertical color='blue-3' />,
   // },
   // {
-  //   label: '75 Merritt St, West Islip, New York 11795',
-  //   href: 'https://www.google.com/maps/place/75+Merritt+St,+West+Islip,+NY+11795/@40.6985146,-73.293962,18z/data=!4m13!1m7!3m6!1s0x89e82d4c16456c71:0x63e0eca0bfed444f!2s75+Merritt+St,+West+Islip,+NY+11795!3b1!8m2!3d40.6985126!4d-73.2928677!3m4!1s0x89e82d4c16456c71:0x63e0eca0bfed444f!8m2!3d40.6985126!4d-73.2928677',
+  //   label: '99 Hudson St 5th floor, New York, NY, 10013 ',
+  //   href: 'https://www.google.com/maps/place/99+Hudson+St+5th+floor,+New+York,+NY+10013/data=!4m2!3m1!1s0x89c25a1fd68cc8ad:0x4d41ade64a165c5d?sa=X&ved=2ahUKEwjXjfKC2b6AAxUqN1kFHUJLD6oQ8gF6BAgXEAA&ved=2ahUKEwjXjfKC2b6AAxUqN1kFHUJLD6oQ8gF6BAgYEAI',
   //   icon: <Map color='blue-3' />,
   // },
 ]
