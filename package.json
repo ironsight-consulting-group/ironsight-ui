@@ -22,11 +22,13 @@
     "grommet": "^2.15.0",
     "grommet-icons": "^4.5.0",
     "lodash": "^4.17.20",
+    "node": "^20.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "styled-components": "^5.2.0",
+    "yarn": "^1.22.19",
     "yup": "^0.29.3"
   },
   "devDependencies": {
@@ -40,7 +42,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "react-scripts start --openssl-legacy-provider",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
