@@ -1,7 +1,7 @@
 {
   "name": "ironsight-ui",
   "private": true,
-  "description": "The landing page for Ironsight Consulting Group.",
+  "description": "The landing page for Ironsight Therapeutics.",
   "version": "0.1.0",
   "author": "Michael Plazek <michael.plazek91@gmail.com>",
   "dependencies": {
