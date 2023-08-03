@@ -1,11 +1,11 @@
-# Ironsight Consulting Group UI
+# Ironsight Therapeutics UI
 
-This is the landing page for the Ironsight Consulting Group, available at www.ironsightgroup.com.
+This is the landing page for Ironsight Therapeutics, available at www.ironsightgroup.com.
 
 ### Development Environment
 
-1. Install Node: `brew install node`
-2. Install the Gatsby CLI: `yarn add -g gatsby-cli`
+1. Install Node: `npm install node`
+2. Install the Gatsby CLI: `npm install -g gatsby-cli`
 
 ### Commands
 

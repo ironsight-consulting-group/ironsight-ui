@@ -7,9 +7,9 @@ import { useStateContext } from "../app/context"
 const CONTENT = `
 ## Terms and Conditions ("Terms")
 
-*Last updated: December 6, 2020*
+*Last updated: August 1, 2023*
 
-Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://www.ironsightgroup.com website (the "Service") operated by IronSight Consulting Group LLC ("us", "we", or "our").
+Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using the http://www.ironsightgroup.com website (the "Service") operated by IronSight Therapeutics LLC ("us", "we", or "our").
 
 Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms. These Terms apply to all visitors, users and others who access or use the Service.
 
@@ -21,9 +21,9 @@ If you wish to purchase any product or service made available through the Servic
 
 **Links To Other Web Sites**
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by IronSight Consulting Group LLC.
+Our Service may contain links to third-party web sites or services that are not owned or controlled by IronSight Therapeutics LLC.
 
-IronSight Consulting Group LLC has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that IronSight Consulting Group LLC shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
+IronSight Therapeutics LLC has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that IronSight Therapeutics LLC shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.
 
 **Changes**
 
