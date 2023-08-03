@@ -4,7 +4,7 @@ import { useStaticQuery } from "gatsby"
 
 import { getCopyrightFromData, getFooterLinksFromData } from "./utils"
 import LayerLauncher from "../LayerLauncher"
-
+import { graphql } from 'gatsby'
 const Footer = () => {
   const data = useStaticQuery(
     graphql`
