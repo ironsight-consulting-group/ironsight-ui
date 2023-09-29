@@ -88,7 +88,7 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
-    `gatsby-plugin-react-helmet`,
+    // `gatsby-plugin-react-helmet`,
     // `gatsby-plugin-sitemap`,
   ],
 }

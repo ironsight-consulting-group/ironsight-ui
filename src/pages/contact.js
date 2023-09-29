@@ -7,8 +7,8 @@ import PageWrapper from "../components/PageWrapper"
 
 const CONTACT_INFO = [
   {
-    label: "info@ironsightcg.com",
-    href: "mailto:info@ironsightcg.com",
+    label: "info@ironsightgroup.com",
+    href: "mailto:info@ironsightgroup.com",
     icon: <MailOption color="blue-3" />,
   },
   // Example of additional contact items in the list
